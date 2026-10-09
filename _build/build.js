@@ -2,7 +2,7 @@
 // Edit CALCS (calcs1.js / calcs2.js), META or the page templates below, then rebuild. Not needed on the web host.
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
-const DOMAIN = 'https://smarttoolsindia.com';          // TODO: replace with the real domain
+const DOMAIN = 'https://smarttoolindia.netlify.app';
 const EMAIL = 'info@smarttoolsindia.com';              // TODO: replace with the real contact email
 const YEAR = 2026;
 const ICONS = 'smarttools-icon-pack/smarttools_icon_pack/';   // icon pack location (relative to site root)

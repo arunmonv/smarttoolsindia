@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-label="Calculator, house, growth chart and gold coins">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4b5d86"/><stop offset="1" stop-color="#2a3558"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd54a"/><stop offset="1" stop-color="#f0a500"/></linearGradient>
+  </defs>
+  <ellipse cx="250" cy="300" rx="200" ry="30" fill="#bfdbfe" opacity=".5"/>
+  <!-- leaves -->
+  <path d="M40 250c-10-50 10-90 55-110 5 50-10 90-55 110z" fill="#22a05a"/>
+  <path d="M410 190c10-50-8-85-45-105-8 45 5 85 45 105z" fill="#1b8a4c"/>
+  <path d="M430 215c20-35 15-70-10-95-20 35-15 70 10 95z" fill="#34c06f"/>
+  <!-- house -->
+  <path d="M215 120l65-55 65 55v70h-130z" fill="#6ea0ff"/>
+  <path d="M205 125l75-65 75 65" fill="none" stroke="#3b6df0" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="262" y="125" width="34" height="34" rx="4" fill="#dbe8ff"/>
+  <!-- chart card -->
+  <rect x="270" y="110" width="150" height="150" rx="14" fill="#fff" stroke="#dbe5f5"/>
+  <path d="M290 195l30-25 22 15 45-45" fill="none" stroke="#22c55e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M385 140h22v22" fill="none" stroke="#22c55e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="290" y="210" width="20" height="35" rx="3" fill="#34d399"/><rect x="318" y="198" width="20" height="47" rx="3" fill="#34d399"/><rect x="346" y="185" width="20" height="60" rx="3" fill="#34d399"/>
+  <!-- calculator -->
+  <g transform="rotate(-8 150 200)">
+    <rect x="75" y="95" width="165" height="215" rx="18" fill="url(#g1)"/>
+    <rect x="92" y="112" width="131" height="48" rx="8" fill="#7f8fb3"/>
+    <g fill="#8fa0c6">
+      <rect x="95" y="176" width="30" height="24" rx="6"/><rect x="132" y="176" width="30" height="24" rx="6"/><rect x="169" y="176" width="30" height="24" rx="6"/>
+      <rect x="95" y="208" width="30" height="24" rx="6"/><rect x="132" y="208" width="30" height="24" rx="6"/><rect x="169" y="208" width="30" height="24" rx="6"/>
+      <rect x="95" y="240" width="30" height="24" rx="6"/><rect x="132" y="240" width="30" height="24" rx="6"/><rect x="169" y="240" width="30" height="24" rx="6"/>
+    </g>
+    <rect x="206" y="176" width="22" height="24" rx="6" fill="#ff9a3c"/><rect x="206" y="208" width="22" height="56" rx="6" fill="#ff9a3c"/>
+  </g>
+  <!-- coins -->
+  <g>
+    <ellipse cx="330" cy="285" rx="52" ry="14" fill="#c98500"/><rect x="278" y="268" width="104" height="17" fill="url(#g2)"/><ellipse cx="330" cy="268" rx="52" ry="14" fill="#ffd54a"/>
+    <ellipse cx="330" cy="256" rx="52" ry="14" fill="#c98500"/><rect x="278" y="239" width="104" height="17" fill="url(#g2)"/><ellipse cx="330" cy="239" rx="52" ry="14" fill="#ffd54a"/>
+    <ellipse cx="330" cy="236" rx="30" ry="8" fill="#f5b800"/>
+  </g>
+</svg>

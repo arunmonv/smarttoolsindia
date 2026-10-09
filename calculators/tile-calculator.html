@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tile Calculator – Free Online | SmartTools India</title>
+<meta name="description" content="Calculate how many floor tiles you need for a room, including wastage, and estimate the total cost.">
+<link rel="canonical" href="https://smarttoolsindia.com/calculators/tile-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SmartTools India">
+<meta property="og:title" content="Tile Calculator – Free Online | SmartTools India">
+<meta property="og:description" content="Calculate how many floor tiles you need for a room, including wastage, and estimate the total cost.">
+<meta property="og:url" content="https://smarttoolsindia.com/calculators/tile-calculator.html">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Tile Calculator","url":"https://smarttoolsindia.com/calculators/tile-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smarttoolsindia.com/"},{"@type":"ListItem","position":2,"name":"Home & Construction","item":"https://smarttoolsindia.com/home-construction/"},{"@type":"ListItem","position":3,"name":"Tile Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much extra tile should I buy?","acceptedAnswer":{"@type":"Answer","text":"Add 10% for straight layouts and 15% for diagonal or patterned layouts."}},{"@type":"Question","name":"Does this include adhesive or labour?","acceptedAnswer":{"@type":"Answer","text":"No, only the tiles themselves."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="SmartTools India home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>SmartTools <span>India</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../home-construction/">Home &amp; Construction</a> › Tile Calculator</p>
+  <h1>Tile Calculator (Number of Tiles &amp; Cost)</h1>
+  <p>Enter your room and tile size to get the number of tiles and the cost.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="rl">Room length (ft)</label>
+      <input id="rl" type="number" min="0" step="any" value="12" inputmode="decimal">
+      <label for="rw">Room width (ft)</label>
+      <input id="rw" type="number" min="0" step="any" value="10" inputmode="decimal">
+      <label for="tl">Tile length (inches)</label>
+      <input id="tl" type="number" min="0" step="any" value="24" inputmode="decimal">
+      <label for="tw">Tile width (inches)</label>
+      <input id="tw" type="number" min="0" step="any" value="24" inputmode="decimal">
+      <label for="waste">Wastage allowance (%)</label>
+      <input id="waste" type="number" min="0" step="any" value="10" inputmode="decimal">
+      <label for="price">Price per tile (₹)</label>
+      <input id="price" type="number" min="0" step="any" value="60" inputmode="decimal">
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Room area</small><b id="area">–</b></div>
+      <div><small>Tiles required</small><b id="tiles">–</b></div>
+      <div><small>Estimated tile cost</small><b id="cost">–</b></div>
+    </div>
+  </div>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>Tiles = room area (sq in) ÷ tile area (sq in), plus wastage for cuts and breakage (10% is typical; 15% for diagonal layouts).</p>
+  </section>
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>How much extra tile should I buy?</summary><p>Add 10% for straight layouts and 15% for diagonal or patterned layouts.</p></details>
+    <details><summary>Does this include adhesive or labour?</summary><p>No, only the tiles themselves.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Home &amp; Construction tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/house-construction-cost-calculator.html" data-keywords="building home area rate"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/construction-cost-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>House Construction Cost Calculator</h3><p>Estimate construction cost based on area and rate.</p><span>Use Now →</span></a><a class="tool" href="../calculators/paint-calculator.html" data-keywords="walls litres colour"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/paint-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Paint Calculator</h3><p>Find the required paint quantity for your walls.</p><span>Use Now →</span></a><a class="tool" href="../calculators/cement-calculator.html" data-keywords="concrete mix m20 slab sand aggregate"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/cement-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Cement Calculator</h3><p>Cement bags, sand and aggregate for a concrete slab.</p><span>Use Now →</span></a><a class="tool" href="../calculators/concrete-calculator.html" data-keywords="slab footing ready mix m3 volume"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/concrete-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Concrete Calculator</h3><p>Concrete volume and ready-mix cost for a slab.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="32" height="32" alt=""><strong>SmartTools India</strong></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 SmartTools India. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"area":"Room area","tiles":"Tiles required","cost":"Estimated tile cost"},compute:function(v, f) {
+    if (![v.rl, v.rw, v.waste, v.price].every(N) || !(v.tl > 0) || !(v.tw > 0)) return null;
+    const area = v.rl * v.rw, tiles = Math.ceil(area * 144 / (v.tl * v.tw) * (1 + v.waste / 100)); // 144 sq in per sq ft
+    return { area: f.num(area, 1) + ' sq ft', tiles: f.num(tiles, 0), cost: f.inr(tiles * v.price) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salary / Take-home Calculator – Free Online | SmartTools India</title>
+<meta name="description" content="Estimate your monthly in-hand salary from annual gross pay after PF, professional tax and income tax. Choose the new or old tax regime and edit every assumption.">
+<link rel="canonical" href="https://smarttoolsindia.com/calculators/salary-take-home-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SmartTools India">
+<meta property="og:title" content="Salary / Take-home Calculator – Free Online | SmartTools India">
+<meta property="og:description" content="Estimate your monthly in-hand salary from annual gross pay after PF, professional tax and income tax. Choose the new or old tax regime and edit every assumption.">
+<meta property="og:url" content="https://smarttoolsindia.com/calculators/salary-take-home-calculator.html">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Salary / Take-home Calculator","url":"https://smarttoolsindia.com/calculators/salary-take-home-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smarttoolsindia.com/"},{"@type":"ListItem","position":2,"name":"Personal & Lifestyle","item":"https://smarttoolsindia.com/personal-lifestyle/"},{"@type":"ListItem","position":3,"name":"Salary / Take-home Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this exact?","acceptedAnswer":{"@type":"Answer","text":"No. It is an estimate; your payslip depends on your employer’s salary structure and your declarations."}},{"@type":"Question","name":"Which tax regime should I pick?","acceptedAnswer":{"@type":"Answer","text":"Try both. For the old regime, enter your 80C, HRA and other deductions under Advanced assumptions and set the standard deduction to ₹50,000 and the 87A limit to ₹5,00,000. Tax slabs change with each Union Budget, so verify against the latest rules."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="SmartTools India home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>SmartTools <span>India</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../personal-lifestyle/">Personal &amp; Lifestyle</a> › Salary / Take-home Calculator</p>
+  <h1>Salary Take-home (In-hand) Calculator – India</h1>
+  <p>An indicative in-hand salary estimate. Pick a tax regime and adjust the assumptions under Advanced to match your payslip.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="gross">Annual gross salary (₹)</label>
+      <input id="gross" type="number" min="0" step="any" value="900000" inputmode="decimal">
+      <label for="basic">Basic pay (% of gross)</label>
+      <input id="basic" type="number" min="0" step="1" value="40" inputmode="decimal">
+      <label for="pt">Professional tax (₹ per month)</label>
+      <input id="pt" type="number" min="0" step="any" value="200" inputmode="decimal">
+      <label for="regime">Income tax regime</label>
+      <select id="regime"><option value="new" selected>New regime (default slabs)</option><option value="old">Old regime (needs deductions below)</option><option value="none">Ignore income tax</option></select>
+      <details class="adv"><summary>Advanced assumptions (editable)</summary>
+      <label for="std">Standard deduction (₹/yr)</label>
+      <input id="std" type="number" min="0" step="any" value="75000" inputmode="decimal">
+      <label for="other">Other deductions from taxable income (₹/yr, e.g. 80C, HRA – mainly old regime)</label>
+      <input id="other" type="number" min="0" step="any" value="0" inputmode="decimal">
+      <label for="pfRate">Employee PF (% of basic)</label>
+      <input id="pfRate" type="number" min="0" step="0.1" value="12" inputmode="decimal">
+      <label for="pfCap">PF yearly cap (₹, 0 = no cap)</label>
+      <input id="pfCap" type="number" min="0" step="any" value="21600" inputmode="decimal">
+      <label for="rebateLim">Tax-free taxable-income limit, Section 87A (₹, 0 = none)</label>
+      <input id="rebateLim" type="number" min="0" step="any" value="1200000" inputmode="decimal">
+      <label for="cess">Health &amp; education cess (%)</label>
+      <input id="cess" type="number" min="0" step="0.1" value="4" inputmode="decimal">
+      </details>
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Employee PF (yearly)</small><b id="pf">–</b></div>
+      <div><small>Taxable income</small><b id="taxable">–</b></div>
+      <div><small>Income tax (yearly)</small><b id="tax">–</b></div>
+      <div><small>Monthly take-home</small><b id="month">–</b></div>
+      <div><small>Yearly take-home</small><b id="year">–</b></div>
+    </div>
+  </div>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>Take-home = gross − employee PF − income tax − professional tax. Tax = slab tax on (gross − standard deduction − other deductions), nil if taxable income is within the Section 87A limit, plus cess. Slabs shown are the new regime (FY 2025-26) and the old regime; every other figure is editable under Advanced assumptions. It ignores employer-specific items (bonuses, insurance, HRA exemption rules), so your payslip will differ.</p>
+  </section>
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>Is this exact?</summary><p>No. It is an estimate; your payslip depends on your employer’s salary structure and your declarations.</p></details>
+    <details><summary>Which tax regime should I pick?</summary><p>Try both. For the old regime, enter your 80C, HRA and other deductions under Advanced assumptions and set the standard deduction to ₹50,000 and the 87A limit to ₹5,00,000. Tax slabs change with each Union Budget, so verify against the latest rules.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Personal &amp; Lifestyle tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/marriage-budget-calculator.html" data-keywords="wedding catering venue decoration"><img src="../smarttools-icon-pack/smarttools_icon_pack/personal-lifestyle/marriage-budget-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Marriage Budget Calculator</h3><p>Plan wedding costs with a contingency buffer.</p><span>Use Now →</span></a><a class="tool" href="../calculators/budget-planner.html" data-keywords="50/30/20 expenses monthly"><img src="../smarttools-icon-pack/smarttools_icon_pack/personal-lifestyle/family-budget-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Budget Planner</h3><p>Split income into needs, wants and savings.</p><span>Use Now →</span></a><a class="tool" href="../calculators/education-cost-calculator.html" data-keywords="college school fees child inflation"><img src="../smarttools-icon-pack/smarttools_icon_pack/personal-lifestyle/education-cost-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Education Cost Calculator</h3><p>Future education cost and monthly savings needed.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="32" height="32" alt=""><strong>SmartTools India</strong></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 SmartTools India. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"pf":"Employee PF (yearly)","taxable":"Taxable income","tax":"Income tax (yearly)","month":"Monthly take-home","year":"Yearly take-home"},compute:function(v, f) {
+    if (![v.gross, v.basic, v.pt, v.std, v.other, v.pfRate, v.pfCap, v.rebateLim, v.cess].every(N)) return null;
+    const pf0 = v.gross * v.basic / 100 * v.pfRate / 100, pf = v.pfCap > 0 ? Math.min(pf0, v.pfCap) : pf0;
+    const taxable = Math.max(v.gross - v.std - v.other, 0);
+    let tax = 0;
+    if (v.regime !== 'none') {
+      // [upper limit, rate]. New regime (FY 2025-26): 4L nil, 8L 5%, 12L 10%, 16L 15%, 20L 20%, 24L 25%, above 30%. Old regime: 2.5L nil, 5L 5%, 10L 20%, above 30%.
+      const slabs = v.regime === 'old' ? [[250000, 0], [500000, .05], [1000000, .20], [Infinity, .30]]
+        : [[400000, 0], [800000, .05], [1200000, .10], [1600000, .15], [2000000, .20], [2400000, .25], [Infinity, .30]];
+      let prev = 0;
+      for (const [lim, r] of slabs) { if (taxable > prev) tax += (Math.min(taxable, lim) - prev) * r; prev = lim; }
+      if (v.rebateLim > 0) {
+        if (taxable <= v.rebateLim) tax = 0;                                        // 87A rebate
+        else if (v.regime === 'new') tax = Math.min(tax, taxable - v.rebateLim);   // marginal relief just above the limit
+      }
+      tax *= 1 + v.cess / 100;
+    }
+    const year = v.gross - pf - tax - v.pt * 12;
+    return { pf: f.inr(pf), taxable: f.inr(taxable), tax: f.inr(tax), month: f.inr(year / 12), year: f.inr(year) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

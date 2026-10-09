@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GST Calculator – Free Online | SmartTools India</title>
+<meta name="description" content="Free GST calculator for India. Add or remove GST at 5%, 12%, 18% or 28% and see the CGST, SGST and final price instantly.">
+<link rel="canonical" href="https://smarttoolsindia.com/calculators/gst-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SmartTools India">
+<meta property="og:title" content="GST Calculator – Free Online | SmartTools India">
+<meta property="og:description" content="Free GST calculator for India. Add or remove GST at 5%, 12%, 18% or 28% and see the CGST, SGST and final price instantly.">
+<meta property="og:url" content="https://smarttoolsindia.com/calculators/gst-calculator.html">
+<meta property="og:locale" content="en_IN">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"GST Calculator","url":"https://smarttoolsindia.com/calculators/gst-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smarttoolsindia.com/"},{"@type":"ListItem","position":2,"name":"Business","item":"https://smarttoolsindia.com/business/"},{"@type":"ListItem","position":3,"name":"GST Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the GST slabs in India?","acceptedAnswer":{"@type":"Answer","text":"Common GST rates are 5%, 12%, 18% and 28%, with 0.25% and 3% for items such as rough stones and gold. Rates change, so check the latest GST notification for your product."}},{"@type":"Question","name":"What is CGST and SGST?","acceptedAnswer":{"@type":"Answer","text":"For sales within a state, GST is split equally between the Central (CGST) and State (SGST) governments."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="SmartTools India home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>SmartTools <span>India</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../business/">Business</a> › GST Calculator</p>
+  <h1>GST Calculator (Add or Remove GST)</h1>
+  <p>Add GST to a price or work out the original price from a GST-inclusive amount.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="amount">Amount (₹)</label>
+      <input id="amount" type="number" min="0" step="any" value="1000" inputmode="decimal">
+      <label for="rate">GST rate (%)</label>
+      <input id="rate" type="number" min="" step="any" value="18" inputmode="decimal" list="rate-list"><datalist id="rate-list"><option value="0.25"><option value="3"><option value="5"><option value="12"><option value="18"><option value="28"></datalist>
+      <label for="mode">Calculation</label>
+      <select id="mode"><option value="add" selected>Add GST (price is exclusive)</option><option value="remove">Remove GST (price is inclusive)</option></select>
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Price before GST</small><b id="base">–</b></div>
+      <div><small>Total GST</small><b id="gst">–</b></div>
+      <div><small>CGST / SGST (each)</small><b id="half">–</b></div>
+      <div><small>Final price</small><b id="total">–</b></div>
+    </div>
+  </div>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>GST amount = price × rate ÷ 100. To remove GST from an inclusive price, divide by (1 + rate ÷ 100). For intra-state sales the GST is split equally into CGST and SGST.</p>
+  </section>
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>What are the GST slabs in India?</summary><p>Common GST rates are 5%, 12%, 18% and 28%, with 0.25% and 3% for items such as rough stones and gold. Rates change, so check the latest GST notification for your product.</p></details>
+    <details><summary>What is CGST and SGST?</summary><p>For sales within a state, GST is split equally between the Central (CGST) and State (SGST) governments.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Business tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/profit-margin-calculator.html" data-keywords="markup business profit"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/margin-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Profit Margin Calculator</h3><p>Find your profit margin and markup percentage.</p><span>Use Now →</span></a><a class="tool" href="../calculators/markup-calculator.html" data-keywords="price profit"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/selling-price-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Markup Calculator</h3><p>Set your selling price from cost and markup %.</p><span>Use Now →</span></a><a class="tool" href="../calculators/discount-calculator.html" data-keywords="sale offer off"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/discount-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Discount Calculator</h3><p>Final price and savings after one or two discounts.</p><span>Use Now →</span></a><a class="tool" href="../calculators/invoice-generator.html" data-keywords="bill gst invoice total"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/gst-invoice-generator.png" width="44" height="44" loading="lazy" alt=""><h3>Invoice Calculator</h3><p>Subtotal, discount, GST and total for an invoice.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="32" height="32" alt=""><strong>SmartTools India</strong></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 SmartTools India. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"base":"Price before GST","gst":"Total GST","half":"CGST / SGST (each)","total":"Final price"},compute:function(v, f) {
+    if (!(v.amount >= 0) || !N(v.rate)) return null;
+    const base = v.mode === 'add' ? v.amount : v.amount / (1 + v.rate / 100);
+    const gst = base * v.rate / 100;
+    return { base: f.inr(base), gst: f.inr(gst), half: f.inr(gst / 2), total: f.inr(base + gst) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

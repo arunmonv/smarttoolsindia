@@ -8,7 +8,12 @@ const YEAR = 2026;
 const ICONS = 'smarttools-icon-pack/smarttools_icon_pack/';   // icon pack location (relative to site root)
 // Tool slug -> icon file when the pack's filename differs from the slug
 const ICON_FILE = { 'paint-calculator': 'home-construction/paint-calculator.svg', 'tile-calculator': 'home-construction/tile-calculator.svg', 'salary-take-home-calculator': 'personal-lifestyle/salary-take-home-calculator.svg', 'percentage-calculator': 'converters-utilities/percentage-calculator.svg', 'house-construction-cost-calculator': 'home-construction/construction-cost-calculator.png', 'flooring-calculator': 'home-construction/flooring-cost-calculator.svg', 'profit-margin-calculator': 'business/margin-calculator.svg', 'markup-calculator': 'business/selling-price-calculator.svg', 'roi-calculator': 'business/profit-calculator.svg', 'invoice-generator': 'business/gst-invoice-generator.png', 'budget-planner': 'personal-lifestyle/family-budget-calculator.svg' };
-const iconOf = (c) => ICON_FILE[c.slug] || `${c.cat}/${c.slug}.png`;
+// Prefer a redrawn SVG (same name as the PNG) when one exists in the icon pack
+const iconOf = (c) => {
+  if (ICON_FILE[c.slug]) return ICON_FILE[c.slug];
+  const svg = `${c.cat}/${c.slug}.svg`;
+  return fs.existsSync(path.join(ROOT, ICONS, svg)) ? svg : `${c.cat}/${c.slug}.png`;
+};
 const CALCS = [...require('./calcs1.js'), ...require('./calcs2.js')];
 // Long-form calculator write-ups (content-*.js) and guide articles (guides*.js); missing files are skipped
 const tryReq = (f) => { try { return require(f); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; return null; } };

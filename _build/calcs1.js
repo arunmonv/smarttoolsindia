@@ -4,7 +4,7 @@ module.exports = [
 {
   slug: 'gst-calculator', cat: 'business', icon: 'business/gst-calculator.png',
   title: 'GST Calculator', h1: 'GST Calculator (Add or Remove GST)',
-  desc: 'Free GST calculator for India. Add or remove GST at 5%, 12%, 18% or 28% and see the CGST, SGST and final price instantly.',
+  desc: 'Free GST calculator for India. Add or remove GST at any rate (such as 5% or 18%) and see the CGST, SGST and final price instantly.',
   intro: 'Add GST to a price or work out the original price from a GST-inclusive amount.',
   fields: [
     { id: 'amount', label: 'Amount (₹)', value: 1000 },
@@ -109,7 +109,7 @@ module.exports = [
          ['Does this include land, interiors or furniture?', 'No. This estimates the structure and basic finishing only.']]
 },
 {
-  slug: 'paint-calculator', cat: 'home-construction', icon: 'home-construction/paint-calculator.png',
+  slug: 'paint-calculator', cat: 'home-construction', icon: 'home-construction/paint-calculator.svg',
   title: 'Paint Calculator', h1: 'Paint Calculator (Litres Needed for Walls)',
   desc: 'Calculate how many litres of paint you need for a room’s walls, after deducting doors and windows, for any number of coats.',
   intro: 'Enter your room size to find out how much paint to buy.',
@@ -131,7 +131,7 @@ module.exports = [
          ['How many coats should I apply?', 'Two coats are standard for walls; a primer coat first gives a better finish.']]
 },
 {
-  slug: 'tile-calculator', cat: 'home-construction', icon: 'home-construction/tile-calculator.png',
+  slug: 'tile-calculator', cat: 'home-construction', icon: 'home-construction/tile-calculator.svg',
   title: 'Tile Calculator', h1: 'Tile Calculator (Number of Tiles & Cost)',
   desc: 'Calculate how many floor tiles you need for a room, including wastage, and estimate the total cost.',
   intro: 'Enter your room and tile size to get the number of tiles and the cost.',
@@ -152,7 +152,7 @@ module.exports = [
          ['Does this include adhesive or labour?', 'No, only the tiles themselves.']]
 },
 {
-  slug: 'salary-take-home-calculator', cat: 'personal-lifestyle', icon: 'personal-lifestyle/salary-take-home-calculator.png',
+  slug: 'salary-take-home-calculator', cat: 'personal-lifestyle', icon: 'personal-lifestyle/salary-take-home-calculator.svg',
   title: 'Salary / Take-home Calculator', h1: 'Salary Take-home (In-hand) Calculator – India',
   desc: 'Estimate your monthly in-hand salary from annual gross pay after PF, professional tax and income tax. Choose the new or old tax regime and edit every assumption.',
   intro: 'An indicative in-hand salary estimate. Pick a tax regime and adjust the assumptions under Advanced to match your payslip.',
@@ -194,7 +194,7 @@ module.exports = [
          ['Which tax regime should I pick?', 'Try both. For the old regime, enter your 80C, HRA and other deductions under Advanced assumptions and set the standard deduction to ₹50,000 and the 87A limit to ₹5,00,000. Tax slabs change with each Union Budget, so verify against the latest rules.']]
 },
 {
-  slug: 'percentage-calculator', cat: 'converters-utilities', icon: 'converters-utilities/percentage-calculator.png',
+  slug: 'percentage-calculator', cat: 'converters-utilities', icon: 'converters-utilities/percentage-calculator.svg',
   title: 'Percentage Calculator', h1: 'Percentage Calculator',
   desc: 'Free percentage calculator: find X% of a number, what percent one number is of another, and percentage increase or decrease.',
   intro: 'Enter two numbers to see all three common percentage results at once.',

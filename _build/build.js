@@ -7,13 +7,25 @@ const EMAIL = 'konjamtherium@gmail.com';               // contact email
 const YEAR = 2026;
 const ICONS = 'smarttools-icon-pack/smarttools_icon_pack/';   // icon pack location (relative to site root)
 // Tool slug -> icon file when the pack's filename differs from the slug
-const ICON_FILE = { 'house-construction-cost-calculator': 'home-construction/construction-cost-calculator.png', 'flooring-calculator': 'home-construction/flooring-cost-calculator.png', 'profit-margin-calculator': 'business/margin-calculator.png', 'markup-calculator': 'business/selling-price-calculator.png', 'roi-calculator': 'business/profit-calculator.png', 'invoice-generator': 'business/gst-invoice-generator.png', 'budget-planner': 'personal-lifestyle/family-budget-calculator.png' };
+const ICON_FILE = { 'paint-calculator': 'home-construction/paint-calculator.svg', 'tile-calculator': 'home-construction/tile-calculator.svg', 'salary-take-home-calculator': 'personal-lifestyle/salary-take-home-calculator.svg', 'percentage-calculator': 'converters-utilities/percentage-calculator.svg', 'house-construction-cost-calculator': 'home-construction/construction-cost-calculator.png', 'flooring-calculator': 'home-construction/flooring-cost-calculator.svg', 'profit-margin-calculator': 'business/margin-calculator.svg', 'markup-calculator': 'business/selling-price-calculator.svg', 'roi-calculator': 'business/profit-calculator.svg', 'invoice-generator': 'business/gst-invoice-generator.png', 'budget-planner': 'personal-lifestyle/family-budget-calculator.svg' };
 const iconOf = (c) => ICON_FILE[c.slug] || `${c.cat}/${c.slug}.png`;
 const CALCS = [...require('./calcs1.js'), ...require('./calcs2.js')];
+// Long-form calculator write-ups (content-*.js) and guide articles (guides*.js); missing files are skipped
+const tryReq = (f) => { try { return require(f); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; return null; } };
+const CONTENT = Object.assign({}, ...['a', 'b', 'c'].map((k) => tryReq(`./content-${k}.js`) || {}));
+const GUIDES = [].concat(...['1', '2'].map((k) => tryReq(`./guides${k}.js`) || []));
+const guideCard = (g) => `<a class="tool" href="/guides/${g.slug}.html"><h3>${esc(g.title)}</h3><p>${esc(g.desc)}</p><span>Read guide →</span></a>`;
+// Render {h, p[]} sections to HTML; paragraphs starting with '- ' become bullet lists
+const renderSections = (secs, h = 'h2') => secs.map((sec) => {
+  let out = `<${h}>${esc(sec.h)}</${h}>`, list = [];
+  const flush = () => { if (list.length) { out += `<ul>${list.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`; list = []; } };
+  for (const t of sec.p) { if (t.startsWith('- ')) list.push(t.slice(2)); else { flush(); out += `<p>${esc(t)}</p>`; } }
+  flush(); return out;
+}).join('\n    ');
 
 // ---- categories (order = homepage order) ----
 const CATS = [
-  { key: 'finance', name: 'Finance', short: 'Loans, EMI, Gold, Savings and more', icon: 'finance/savings-calculator.png', nav: 'calculators',
+  { key: 'finance', name: 'Finance', short: 'Loans, EMI, Gold, Savings and more', icon: 'finance/savings-calculator.svg', nav: 'calculators',
     title: 'Finance Calculators – EMI, Loan, Gold & Savings', desc: 'Free finance calculators for India: EMI, personal loan, home loan, car & bike loan, gold loan, gold jewellery price, savings and loan comparison.',
     text: 'Plan borrowing and saving with confidence. These calculators cover every common loan in India – home, car, bike and personal – as well as gold loans, jewellery pricing and savings growth. All calculations run in your browser; nothing you enter is sent or stored.' },
   { key: 'home-construction', name: 'Home & Construction', short: 'Construction, Paint, Tiles, Cement and more', icon: 'home-construction/construction-cost-calculator.png', nav: 'calculators',
@@ -22,7 +34,7 @@ const CATS = [
   { key: 'business', name: 'Business', short: 'GST, Profit, Margin, Invoice and more', icon: 'business/gst-calculator.png', nav: 'calculators',
     title: 'Business Calculators – GST, Profit Margin, Invoice, ROI', desc: 'Free business calculators for India: GST, profit margin, markup, discount, invoice total, break-even and ROI.',
     text: 'Everyday maths for shop owners, freelancers and small businesses: add or remove GST, price products with the right markup, check margins, total an invoice and find your break-even point.' },
-  { key: 'personal-lifestyle', name: 'Personal & Lifestyle', short: 'Marriage, Salary, Budget, Education and more', icon: 'personal-lifestyle/family-budget-calculator.png', nav: 'calculators',
+  { key: 'personal-lifestyle', name: 'Personal & Lifestyle', short: 'Marriage, Salary, Budget, Education and more', icon: 'personal-lifestyle/family-budget-calculator.svg', nav: 'calculators',
     title: 'Personal & Lifestyle Calculators – Salary, Budget, Wedding', desc: 'Free personal finance calculators for India: salary take-home, monthly budget planner, wedding budget and education cost planning.',
     text: 'Plan the big moments and the monthly routine – from your in-hand salary and a simple 50/30/20 budget to wedding costs and saving for your child’s education.' },
   { key: 'converters-utilities', name: 'Converters & Utilities', short: 'Unit, Date, Age, Percentage and more', icon: 'converters-utilities/unit-converter.png', nav: 'converters',
@@ -86,7 +98,8 @@ function header(prefix, cur) {
       ${dd('calculators', '/calculators/', 'Calculators', [...CATS.filter((c) => c.nav === 'calculators').map((c) => `<a href="/${c.key}/">${esc(c.name)}</a>`), '<a href="/calculators/">All calculators</a>'])}
       ${dd('tools', '/#featured', 'Tools', ['<a href="/ai-assistant/">AI Assistant</a>', ...['emi-calculator', 'gst-calculator', 'gold-jewellery-calculator', 'salary-take-home-calculator'].map((s) => item(CALCS.find((c) => c.slug === s)))])}
       ${dd('converters', '/converters-utilities/', 'Converters', byCat('converters-utilities').map(item))}
-      ${dd('resources', '/resources/', 'Resources', ['<a href="/about/">About Us</a>', '<a href="/contact/">Contact</a>', '<a href="/privacy-policy/">Privacy Policy</a>', '<a href="/disclaimer/">Disclaimer</a>'])}
+      ${dd('resources', '/resources/', 'Resources', ['<a href="/guides/">Guides</a>', '<a href="/about/">About Us</a>', '<a href="/contact/">Contact</a>', '<a href="/privacy-policy/">Privacy Policy</a>', '<a href="/disclaimer/">Disclaimer</a>'])}
+      ${link('/guides/', 'Guides', cur === 'guides')}
       ${link('/about/', 'About', cur === 'about')}
     </nav>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="${prefix}${ICONS}navigation/dark-mode.png" width="22" height="22" alt=""></button>
@@ -99,7 +112,7 @@ function footer(prefix) {
   return `<footer class="site-footer">
   <div class="container footer-inner">
     <a class="brand" href="/"><img src="${prefix}${ICONS}navigation/calculators.png" width="32" height="32" alt=""><strong>SmartTools India</strong></a>
-    <nav aria-label="Footer"><a href="/">Home</a><a href="/calculators/">Calculators</a><a href="/#featured">Tools</a><a href="/converters-utilities/">Converters</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a></nav>
+    <nav aria-label="Footer"><a href="/">Home</a><a href="/calculators/">Calculators</a><a href="/#featured">Tools</a><a href="/converters-utilities/">Converters</a><a href="/resources/">Resources</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a></nav>
     <span>© ${YEAR} SmartTools India. All rights reserved. Results are estimates for guidance only.</span>
   </div>
 </footer>`;
@@ -160,6 +173,10 @@ function calcPage(c) {
   const fields = mainFields + (advFields ? `\n      <details class="adv"><summary>Advanced assumptions (editable)</summary>\n      ${advFields}\n      </details>` : '');
   const results = Object.entries(c.results).map(([id, lab]) => `<div><small>${esc(lab)}</small><b id="${id}">–</b></div>`).join('\n      ');
   const related = byCat(c.cat).filter((x) => x.slug !== c.slug).slice(0, 4);
+  const extra = CONTENT[c.slug] || {};
+  // Existing FAQs (optionally one replaced with a corrected answer) plus the extra ones from content-*.js
+  const faqs = c.faqs.map(([q, a]) => (extra.replaceFaq && extra.replaceFaq[0] === q ? [q, extra.replaceFaq[1]] : [q, a])).concat(extra.faqs || []);
+  const guides = GUIDES.filter((g) => (g.related || []).includes(c.slug));
   const body = `<main class="container">
   <p class="crumbs"><a href="/">Home</a> › <a href="/${cat.key}/">${esc(cat.name)}</a> › ${esc(c.title)}</p>
   <h1>${esc(c.h1)}</h1>
@@ -176,10 +193,13 @@ function calcPage(c) {
   <section class="seo-text">
     <h2>How it works</h2>
     <p>${esc(c.how)}</p>
+    ${renderSections(extra.sections || [])}
+    <p class="note"><b>Please note:</b> results are estimates based on the inputs and assumptions shown above. Actual figures depend on your lender, supplier, location and current rules. See our <a href="/disclaimer/">disclaimer</a>.</p>
   </section>
+  ${guides.length ? `<section class="block"><h2>Related guides</h2><ul class="plain-list">${guides.map((g) => `<li><a href="/guides/${g.slug}.html">${esc(g.title)}</a></li>`).join('')}</ul></section>` : ''}
   <section class="faq">
     <h2>FAQs</h2>
-    ${c.faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('\n    ')}
+    ${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('\n    ')}
   </section>
   <section class="block">
     <h2>More ${esc(cat.name)} tools</h2>
@@ -191,7 +211,7 @@ function calcPage(c) {
     ld: { '@context': 'https://schema.org', '@graph': [
       { '@type': 'WebApplication', name: c.title, url: DOMAIN + url, applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' } },
       crumbLd([['Home', '/'], [cat.name, `/${cat.key}/`], [c.title]]),
-      { '@type': 'FAQPage', mainEntity: c.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }] },
+      { '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }] },
     inlineScript: `var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:${JSON.stringify(c.results)},compute:${c.compute.toString().replace(/^compute/, 'function')}};`,
     scripts: ['js/calc.js']
   });
@@ -252,7 +272,7 @@ write('index.html', layout({
     <img class="hero-art" src="img/hero.svg" width="480" height="340" alt="Calculator, house, growth chart and gold coins illustration">
     <ul class="features">
       <li><img src="${ICONS}navigation/tools.png" width="44" height="44" alt=""><div><b>Quick &amp; Accurate</b><span>Get instant and reliable results</span></div></li>
-      <li><img src="${ICONS}finance/savings-calculator.png" width="44" height="44" alt=""><div><b>100% Free</b><span>No registration required</span></div></li>
+      <li><img src="${ICONS}finance/savings-calculator.svg" width="44" height="44" alt=""><div><b>100% Free</b><span>No registration required</span></div></li>
       <li><img src="${ICONS}navigation/about.png" width="44" height="44" alt=""><div><b>India Focused</b><span>Built for Indian users &amp; needs</span></div></li>
       <li><img src="${ICONS}navigation/converters.png" width="44" height="44" alt=""><div><b>Mobile Friendly</b><span>Use on any device, anywhere</span></div></li>
     </ul>
@@ -279,6 +299,13 @@ write('index.html', layout({
   </div>
 </section>
 
+${GUIDES.length ? `<section class="block">
+  <div class="container">
+    <div class="head-row"><h2>Latest Guides</h2><a href="/guides/">All guides →</a></div>
+    <div class="tool-grid">${GUIDES.slice(0, 5).map(guideCard).join('')}</div>
+  </div>
+</section>` : ''}
+
 <section class="block">
   <div class="container">
     <div class="ai-bar">
@@ -290,6 +317,10 @@ write('index.html', layout({
 
 <section class="block">
   <div class="container seo-text">
+    <h2>How to use SmartTools India</h2>
+    <p>Pick a calculator, enter your numbers and read the result straight away – there is nothing to install and no sign-up. Each calculator page explains the formula it uses, shows a worked example and lists the assumptions behind the result, so you can check the logic rather than trust a black box. Fields under “Advanced assumptions” let you change defaults such as GST on making charges, wastage on tiles or the loan-to-value ratio on a gold loan.</p>
+    <p>Our <a href="/guides/"><u>guides</u></a> go deeper than the calculators: how EMI is calculated, how gold loan value is decided, how much paint or cement a job needs, and how to plan a monthly budget. They are written in plain language with worked numbers, and they link back to the matching calculator.</p>
+    <p>All results are estimates for planning. Rates, taxes and material prices change and differ by lender, jeweller, supplier and city, so confirm the final figures with the provider before you commit. See our <a href="/disclaimer/"><u>disclaimer</u></a> and <a href="/about/"><u>about page</u></a> for how the tools are built and maintained.</p>
     <h2>Free Online Calculators Built for India</h2>
     <p>SmartTools India brings together the calculators Indians use every day: an <a href="/calculators/emi-calculator.html"><u>EMI calculator</u></a> for home, car and personal loans, a <a href="/calculators/gst-calculator.html"><u>GST calculator</u></a>, gold jewellery and gold loan calculators, house construction cost estimators, and salary take-home tools. Everything runs in your browser, so results are instant and your numbers are never stored or sent anywhere.</p>
   </div>
@@ -330,7 +361,7 @@ simple('contact', 'Contact Us', 'Contact SmartTools India for feedback, suggesti
 <p><a class="btn-link" href="mailto:${EMAIL}">Email ${EMAIL}</a></p>
 <p>Please include the name of the calculator and the values you entered when reporting an issue.</p>`, 'resources');
 simple('resources', 'Resources', 'Helpful pages about SmartTools India: about us, contact, privacy policy and disclaimer.', 'Resources', `
-<ul class="plain-list"><li><a href="/about/">About Us</a> – who we are and how the tools work</li><li><a href="/ai-assistant/">AI Assistant</a> – find the right calculator quickly</li><li><a href="/contact/">Contact</a> – feedback and suggestions</li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul>`, 'resources');
+<ul class="plain-list"><li><a href="/guides/">Guides</a> – step-by-step explainers on loans, GST, gold, construction and budgeting</li><li><a href="/about/">About Us</a> – who we are and how the tools work</li><li><a href="/ai-assistant/">AI Assistant</a> – find the right calculator quickly</li><li><a href="/contact/">Contact</a> – feedback and suggestions</li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul>`, 'resources');
 simple('privacy-policy', 'Privacy Policy', 'How SmartTools India handles your data: calculations run in your browser and are not stored or sent to our servers.', 'Privacy Policy', `
 <p><b>Last updated:</b> ${YEAR}</p>
 <p>Calculations on SmartTools India run entirely in your browser. The values you enter are not sent to or stored on our servers.</p>
@@ -344,7 +375,32 @@ simple('disclaimer', 'Disclaimer', 'SmartTools India calculators provide estimat
 
 write('404.html', layout({ title: 'Page not found | SmartTools India', desc: 'The page you were looking for could not be found.', url: '/404.html', depth: 0, root: true, cur: '', body: `<main class="container narrow"><h1>Page not found</h1><p>Sorry, we couldn’t find that page. Try the <a href="/calculators/">full list of calculators</a> or go back to the <a href="/">homepage</a>.</p></main>` }));
 
+// ---- guides (long-form articles; /guides/ index + one page per article) ----
+write('guides/index.html', layout({
+  title: 'Guides – Loans, GST, Gold, Construction & Budgeting | SmartTools India', desc: 'Plain-language guides for Indian users: how EMI is calculated, GST slabs, gold loan value, house construction cost, budgeting and more.', url: '/guides/', depth: 1, cur: 'guides',
+  ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], ['Guides']])] },
+  body: `<main class="container"><p class="crumbs"><a href="/">Home</a> › Guides</p><h1>Guides</h1>
+  <p>Step-by-step explainers that sit alongside our calculators – formulas, worked examples and common mistakes, written for everyday Indian users.</p>
+  <div class="tool-grid">${GUIDES.map(guideCard).join('')}</div></main>`
+}));
+GUIDES.forEach((g) => {
+  const url = `/guides/${g.slug}.html`;
+  const rel = g.related.map((r) => CALCS.find((c) => c.slug === r)).filter(Boolean);
+  write(`guides/${g.slug}.html`, layout({
+    title: `${g.title} | SmartTools India`, desc: g.desc, url, depth: 1, cur: 'guides',
+    ld: { '@context': 'https://schema.org', '@graph': [
+      { '@type': 'Article', headline: g.title, description: g.desc, inLanguage: 'en-IN', mainEntityOfPage: DOMAIN + url, dateModified: `${YEAR}-10-10`, author: { '@type': 'Organization', name: 'SmartTools India' }, publisher: { '@type': 'Organization', name: 'SmartTools India' } },
+      crumbLd([['Home', '/'], ['Guides', '/guides/'], [g.title]])] },
+    body: `<main class="container narrow"><p class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › ${esc(g.title)}</p>
+  <article class="seo-text guide"><h1>${esc(g.title)}</h1><p class="lead">${esc(g.intro)}</p>
+    ${renderSections(g.sections)}
+    <p class="note"><b>Please note:</b> this guide is for general information, not financial, tax or legal advice. Rates and rules change, so confirm current figures with your lender or the official source. See our <a href="/disclaimer/">disclaimer</a>.</p>
+  </article>
+  ${rel.length ? `<section class="block"><h2>Try the calculators</h2><div class="tool-grid">${rel.map((r) => card(r, '../')).join('')}</div></section>` : ''}</main>`
+  }));
+});
+
 // ---- sitemap (every page except 404) ----
-const urls = ['/', '/calculators/', ...CATS.map((c) => `/${c.key}/`), '/ai-assistant/', '/about/', '/contact/', '/resources/', '/privacy-policy/', '/disclaimer/', ...CALCS.map((c) => `/calculators/${c.slug}.html`)];
+const urls = ['/', '/calculators/', ...CATS.map((c) => `/${c.key}/`), '/ai-assistant/', '/guides/', ...GUIDES.map((g) => `/guides/${g.slug}.html`), '/about/', '/contact/', '/resources/', '/privacy-policy/', '/disclaimer/', ...CALCS.map((c) => `/calculators/${c.slug}.html`)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${DOMAIN}${u}</loc><priority>${u === '/' ? '1.0' : u.startsWith('/calculators/') && u !== '/calculators/' ? '0.8' : '0.6'}</priority></url>`).join('\n')}\n</urlset>\n`);
 console.log(`Built ${CALCS.length} calculators, ${CATS.length} categories, ${urls.length} sitemap URLs`);

@@ -213,3 +213,15 @@ section.block{padding:40px 0}
 .site-footer .brand small{color:#9fb0cc;font-size:.72rem;display:block}
 .footer-inner>span{display:block}
 @media(max-width:700px){.site-footer .brand small{display:block;font-size:.7rem}.site-footer .brand{justify-content:center;text-align:left}}
+/* ---- mobile polish (real-device feedback) ---- */
+@media(max-width:700px){
+ .header-inner{gap:4px}
+ .header-inner #theme-toggle{margin-left:auto}
+ .menu-btn{margin-left:0;margin-right:-6px}
+ .hero p{max-width:none}
+ .hero h1{max-width:62%}
+ .search input{font-size:.82rem;padding-left:40px;background-position:11px center;background-size:20px}
+ .search input::placeholder{font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .search button{padding:0 16px;font-size:.92rem}
+}
+.cat-1 h3{color:var(--text)}

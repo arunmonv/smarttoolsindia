@@ -140,6 +140,14 @@ function layout(o) {
 <meta property="og:description" content="${esc(o.desc)}">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="en_IN">
+<meta property="og:image" content="${DOMAIN}/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnKanakku – free calculators for India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(o.title)}">
+<meta name="twitter:description" content="${esc(o.desc)}">
+<meta name="twitter:image" content="${DOMAIN}/img/og-image.png">
 <link rel="icon" href="${prefix}${ICONS}navigation/calculators.png">
 <link rel="stylesheet" href="${prefix}css/style.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
@@ -270,7 +278,7 @@ write('index.html', layout({
       <h1>Smart Tools for <span>Everyday Decisions</span></h1>
       <p>Use our free calculators, converters and useful tools to plan your finances, home, business and more — all in one place.</p>
       <form class="search" id="search-form" role="search">
-        <input id="q" type="search" placeholder="Search calculators and tools..." aria-label="Search tools" autocomplete="off">
+        <input id="q" type="search" placeholder="Search EMI, GST, gold..." aria-label="Search tools" autocomplete="off">
         <button type="submit">Search</button>
       </form>
     </div>

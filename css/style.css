@@ -207,3 +207,9 @@ section.block{padding:40px 0}
  .header-inner{gap:6px}
  .search input{font-size:.88rem}.search button{padding:0 18px}
 }
+/* footer brand with caption (mirrors the header logo) */
+.site-footer .brand img{width:40px;height:40px;border-radius:10px}
+.site-footer .brand strong{line-height:1.1}.site-footer .brand strong span{color:#60a5fa}
+.site-footer .brand small{color:#9fb0cc;font-size:.72rem;display:block}
+.footer-inner>span{display:block}
+@media(max-width:700px){.site-footer .brand small{display:block;font-size:.7rem}.site-footer .brand{justify-content:center;text-align:left}}

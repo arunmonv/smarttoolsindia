@@ -116,7 +116,7 @@ function header(prefix, cur) {
 function footer(prefix) {
   return `<footer class="site-footer">
   <div class="container footer-inner">
-    <a class="brand" href="/"><img src="${prefix}${ICONS}navigation/calculators.png" width="32" height="32" alt=""><strong>EnKanakku</strong></a>
+    <a class="brand" href="/"><img src="${prefix}${ICONS}navigation/calculators.png" width="40" height="40" alt=""><span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span></a>
     <nav aria-label="Footer"><a href="/">Home</a><a href="/calculators/">Calculators</a><a href="/#featured">Tools</a><a href="/converters-utilities/">Converters</a><a href="/resources/">Resources</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a></nav>
     <span>© ${YEAR} EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
   </div>

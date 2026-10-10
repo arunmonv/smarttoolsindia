@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smarttoolindia.netlify.app/sitemap.xml
+Sitemap: https://enkanakku.netlify.app/sitemap.xml

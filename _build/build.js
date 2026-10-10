@@ -89,9 +89,9 @@ function header(prefix, cur) {
   const item = (c) => `<a href="/calculators/${c.slug}.html">${esc(c.title)}</a>`;
   return `<header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="/" aria-label="SmartTools India home">
+    <a class="brand" href="/" aria-label="EnKanakku home">
       <img src="${prefix}${ICONS}navigation/calculators.png" width="44" height="44" alt="">
-      <span><strong>SmartTools <span>India</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+      <span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       ${link('/', 'Home', cur === 'home')}
@@ -111,9 +111,9 @@ function header(prefix, cur) {
 function footer(prefix) {
   return `<footer class="site-footer">
   <div class="container footer-inner">
-    <a class="brand" href="/"><img src="${prefix}${ICONS}navigation/calculators.png" width="32" height="32" alt=""><strong>SmartTools India</strong></a>
+    <a class="brand" href="/"><img src="${prefix}${ICONS}navigation/calculators.png" width="32" height="32" alt=""><strong>EnKanakku</strong></a>
     <nav aria-label="Footer"><a href="/">Home</a><a href="/calculators/">Calculators</a><a href="/#featured">Tools</a><a href="/converters-utilities/">Converters</a><a href="/resources/">Resources</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a></nav>
-    <span>© ${YEAR} SmartTools India. All rights reserved. Results are estimates for guidance only.</span>
+    <span>© ${YEAR} EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
   </div>
 </footer>`;
 }
@@ -130,7 +130,7 @@ function layout(o) {
 <link rel="canonical" href="${url}">
 <meta name="theme-color" content="#2563eb">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="SmartTools India">
+<meta property="og:site_name" content="EnKanakku">
 <meta property="og:title" content="${esc(o.title)}">
 <meta property="og:description" content="${esc(o.desc)}">
 <meta property="og:url" content="${url}">
@@ -207,7 +207,7 @@ function calcPage(c) {
   </section>
 </main>`;
   return layout({
-    title: `${c.title} – Free Online | SmartTools India`, desc: c.desc, url, depth: 1, cur: cat.nav, body,
+    title: `${c.title} – Free Online | EnKanakku`, desc: c.desc, url, depth: 1, cur: cat.nav, body,
     ld: { '@context': 'https://schema.org', '@graph': [
       { '@type': 'WebApplication', name: c.title, url: DOMAIN + url, applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' } },
       crumbLd([['Home', '/'], [cat.name, `/${cat.key}/`], [c.title]]),
@@ -222,7 +222,7 @@ CALCS.forEach((c) => write(`calculators/${c.slug}.html`, calcPage(c)));
 CATS.forEach((cat) => {
   const tools = byCat(cat.key);
   write(`${cat.key}/index.html`, layout({
-    title: `${cat.title} | SmartTools India`, desc: cat.desc, url: `/${cat.key}/`, depth: 1, cur: cat.nav,
+    title: `${cat.title} | EnKanakku`, desc: cat.desc, url: `/${cat.key}/`, depth: 1, cur: cat.nav,
     ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], [cat.name]]), { '@type': 'CollectionPage', name: cat.name + ' calculators', url: `${DOMAIN}/${cat.key}/`, hasPart: tools.map((t) => ({ '@type': 'WebPage', name: t.title, url: `${DOMAIN}/calculators/${t.slug}.html` })) }] },
     body: `<main class="container">
   <p class="crumbs"><a href="/">Home</a> › ${esc(cat.name)}</p>
@@ -236,7 +236,7 @@ CATS.forEach((cat) => {
 
 // ---- all-calculators hub ----
 write('calculators/index.html', layout({
-  title: 'All Calculators – Finance, Construction, Business & More | SmartTools India', desc: `All ${CALCS.length} free online calculators and converters for India in one place.`, url: '/calculators/', depth: 1, cur: 'calculators',
+  title: 'All Calculators – Finance, Construction, Business & More | EnKanakku', desc: `All ${CALCS.length} free online calculators and converters for India in one place.`, url: '/calculators/', depth: 1, cur: 'calculators',
   ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], ['All calculators']])] },
   body: `<main class="container">
   <p class="crumbs"><a href="/">Home</a> › All calculators</p>
@@ -252,11 +252,11 @@ const featured = CALCS.filter((c) => c.featured).sort((a, b) => a.featured - b.f
 const SEARCH_INDEX = CALCS.map((c) => ({ t: c.title, u: `calculators/${c.slug}.html`, i: `${ICONS}${iconOf(c)}`, b: c.blurb, k: (c.title + ' ' + c.blurb + ' ' + c.kw + ' ' + catOf(c.cat).name).toLowerCase() }));
 write('index.html', layout({
   inlineScript: `window.SEARCH=${JSON.stringify(SEARCH_INDEX)};`,
-  title: 'SmartTools India – Free EMI, GST, Gold & Construction Calculators', url: '/', depth: 0, cur: 'home',
+  title: 'EnKanakku – Free EMI, GST, Gold & Construction Calculators', url: '/', depth: 0, cur: 'home',
   desc: 'Free online calculators for India: EMI, GST, gold jewellery, gold loan, house construction cost, paint, tiles, salary and more. Fast, accurate, no registration.',
   ld: { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Organization', name: 'SmartTools India', url: DOMAIN + '/', logo: DOMAIN + '/' + ICONS + 'navigation/calculators.png' },
-    { '@type': 'WebSite', name: 'SmartTools India', url: DOMAIN + '/', inLanguage: 'en-IN' }] },
+    { '@type': 'Organization', name: 'EnKanakku', url: DOMAIN + '/', logo: DOMAIN + '/' + ICONS + 'navigation/calculators.png' },
+    { '@type': 'WebSite', name: 'EnKanakku', url: DOMAIN + '/', inLanguage: 'en-IN' }] },
   body: `<main>
 <section class="hero">
   <div class="container hero-grid">
@@ -318,12 +318,12 @@ ${GUIDES.length ? `<section class="block">
 
 <section class="block">
   <div class="container seo-text">
-    <h2>How to use SmartTools India</h2>
+    <h2>How to use EnKanakku</h2>
     <p>Pick a calculator, enter your numbers and read the result straight away – there is nothing to install and no sign-up. Each calculator page explains the formula it uses, shows a worked example and lists the assumptions behind the result, so you can check the logic rather than trust a black box. Fields under “Advanced assumptions” let you change defaults such as GST on making charges, wastage on tiles or the loan-to-value ratio on a gold loan.</p>
     <p>Our <a href="/guides/"><u>guides</u></a> go deeper than the calculators: how EMI is calculated, how gold loan value is decided, how much paint or cement a job needs, and how to plan a monthly budget. They are written in plain language with worked numbers, and they link back to the matching calculator.</p>
     <p>All results are estimates for planning. Rates, taxes and material prices change and differ by lender, jeweller, supplier and city, so confirm the final figures with the provider before you commit. See our <a href="/disclaimer/"><u>disclaimer</u></a> and <a href="/about/"><u>about page</u></a> for how the tools are built and maintained.</p>
     <h2>Free Online Calculators Built for India</h2>
-    <p>SmartTools India brings together the calculators Indians use every day: an <a href="/calculators/emi-calculator.html"><u>EMI calculator</u></a> for home, car and personal loans, a <a href="/calculators/gst-calculator.html"><u>GST calculator</u></a>, gold jewellery and gold loan calculators, house construction cost estimators, and salary take-home tools. Everything runs in your browser, so results are instant and your numbers are never stored or sent anywhere.</p>
+    <p>EnKanakku brings together the calculators Indians use every day: an <a href="/calculators/emi-calculator.html"><u>EMI calculator</u></a> for home, car and personal loans, a <a href="/calculators/gst-calculator.html"><u>GST calculator</u></a>, gold jewellery and gold loan calculators, house construction cost estimators, and salary take-home tools. Everything runs in your browser, so results are instant and your numbers are never stored or sent anywhere.</p>
   </div>
 </section>
 </main>`
@@ -332,7 +332,7 @@ ${GUIDES.length ? `<section class="block">
 // ---- AI assistant (rule-based, runs in the browser; no server cost) ----
 const TOOLS = CALCS.map((c) => ({ t: c.title, u: `../calculators/${c.slug}.html`, k: (c.title + ' ' + c.blurb + ' ' + c.kw).toLowerCase() }));
 write('ai-assistant/index.html', layout({
-  title: 'AI Assistant – Find the Right Calculator | SmartTools India', desc: 'Ask a question about loans, GST, gold, construction or budgeting and get pointed to the right free calculator instantly.', url: '/ai-assistant/', depth: 1, cur: 'tools',
+  title: 'AI Assistant – Find the Right Calculator | EnKanakku', desc: 'Ask a question about loans, GST, gold, construction or budgeting and get pointed to the right free calculator instantly.', url: '/ai-assistant/', depth: 1, cur: 'tools',
   ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], ['AI Assistant']])] },
   body: `<main class="container narrow">
   <p class="crumbs"><a href="/">Home</a> › AI Assistant</p>
@@ -349,36 +349,36 @@ write('ai-assistant/index.html', layout({
 }));
 
 // ---- content pages ----
-const simple = (slug, title, desc, h1, html, cur) => write(`${slug}/index.html`, layout({ title: `${title} | SmartTools India`, desc, url: `/${slug}/`, depth: 1, cur, ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], [h1]])] }, body: `<main class="container narrow"><p class="crumbs"><a href="/">Home</a> › ${esc(h1)}</p><h1>${esc(h1)}</h1>${html}</main>` }));
-simple('about', 'About Us', 'SmartTools India offers free, accurate calculators and converters built for Indian users: finance, home construction, business and everyday needs.', 'About SmartTools India', `
-<p>SmartTools India is a collection of free calculators, converters and everyday tools designed for Indian users – loans and EMI, GST, gold, home construction, salary, budgets and more.</p>
+const simple = (slug, title, desc, h1, html, cur) => write(`${slug}/index.html`, layout({ title: `${title} | EnKanakku`, desc, url: `/${slug}/`, depth: 1, cur, ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], [h1]])] }, body: `<main class="container narrow"><p class="crumbs"><a href="/">Home</a> › ${esc(h1)}</p><h1>${esc(h1)}</h1>${html}</main>` }));
+simple('about', 'About Us', 'EnKanakku offers free, accurate calculators and converters built for Indian users: finance, home construction, business and everyday needs.', 'About EnKanakku', `
+<p>EnKanakku is a collection of free calculators, converters and everyday tools designed for Indian users – loans and EMI, GST, gold, home construction, salary, budgets and more.</p>
 <h2>Our approach</h2>
 <ul><li><b>Free:</b> no sign-up, no hidden charges.</li><li><b>India focused:</b> ₹ formatting, GST slabs, Indian units such as cent, gunta and tola.</li><li><b>Private:</b> every calculation runs in your browser. We never receive the numbers you enter.</li><li><b>Fast:</b> lightweight pages that work on any phone.</li></ul>
 <h2>Important note</h2>
 <p>Our tools give estimates to help you plan. Banks, builders, jewellers and tax rules differ, so always confirm figures with the relevant provider or a qualified professional before making a financial decision.</p>
 <p><a class="btn-link" href="/calculators/">Browse all ${CALCS.length} tools →</a></p>`, 'about');
-simple('contact', 'Contact Us', 'Contact SmartTools India for feedback, suggestions for new calculators or corrections.', 'Contact Us', `
+simple('contact', 'Contact Us', 'Contact EnKanakku for feedback, suggestions for new calculators or corrections.', 'Contact Us', `
 <p>Found a mistake, or want a calculator we don’t have yet? We’d love to hear from you.</p>
 <p><a class="btn-link" href="mailto:${EMAIL}">Email ${EMAIL}</a></p>
 <p>Please include the name of the calculator and the values you entered when reporting an issue.</p>`, 'resources');
-simple('resources', 'Resources', 'Helpful pages about SmartTools India: about us, contact, privacy policy and disclaimer.', 'Resources', `
+simple('resources', 'Resources', 'Helpful pages about EnKanakku: about us, contact, privacy policy and disclaimer.', 'Resources', `
 <ul class="plain-list"><li><a href="/guides/">Guides</a> – step-by-step explainers on loans, GST, gold, construction and budgeting</li><li><a href="/about/">About Us</a> – who we are and how the tools work</li><li><a href="/ai-assistant/">AI Assistant</a> – find the right calculator quickly</li><li><a href="/contact/">Contact</a> – feedback and suggestions</li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul>`, 'resources');
-simple('privacy-policy', 'Privacy Policy', 'How SmartTools India handles your data: calculations run in your browser and are not stored or sent to our servers.', 'Privacy Policy', `
+simple('privacy-policy', 'Privacy Policy', 'How EnKanakku handles your data: calculations run in your browser and are not stored or sent to our servers.', 'Privacy Policy', `
 <p><b>Last updated:</b> ${YEAR}</p>
-<p>Calculations on SmartTools India run entirely in your browser. The values you enter are not sent to or stored on our servers.</p>
+<p>Calculations on EnKanakku run entirely in your browser. The values you enter are not sent to or stored on our servers.</p>
 <h2>What is stored on your device</h2><p>We save only your light/dark theme preference in your browser’s local storage.</p>
 <h2>Analytics and advertising</h2><p>We use Google Analytics 4 to understand how many people visit the site and which pages they view. Google Analytics may use cookies and collects anonymised usage data such as pages viewed, approximate location and device type. The values you enter into calculators are not shared with it. If we add advertising in future, we will update this policy first.</p>
 <h2>Contact</h2><p>Questions about this policy: <a href="mailto:${EMAIL}">${EMAIL}</a>.</p>`, 'resources');
-simple('disclaimer', 'Disclaimer', 'SmartTools India calculators provide estimates for guidance only and are not financial, tax or legal advice.', 'Disclaimer', `
-<p>The calculators on SmartTools India provide estimates for general guidance only. They are not financial, tax, legal or construction advice.</p>
+simple('disclaimer', 'Disclaimer', 'EnKanakku calculators provide estimates for guidance only and are not financial, tax or legal advice.', 'Disclaimer', `
+<p>The calculators on EnKanakku provide estimates for general guidance only. They are not financial, tax, legal or construction advice.</p>
 <p>Actual EMI, interest, tax, gold prices, material quantities and costs depend on your lender, jeweller, supplier, location and current rules. Rates and tax slabs change. Always verify figures with the relevant provider or a qualified professional.</p>
 <p>We make reasonable efforts to keep the tools accurate but accept no liability for decisions made using their results.</p>`, 'resources');
 
-write('404.html', layout({ title: 'Page not found | SmartTools India', desc: 'The page you were looking for could not be found.', url: '/404.html', depth: 0, root: true, cur: '', body: `<main class="container narrow"><h1>Page not found</h1><p>Sorry, we couldn’t find that page. Try the <a href="/calculators/">full list of calculators</a> or go back to the <a href="/">homepage</a>.</p></main>` }));
+write('404.html', layout({ title: 'Page not found | EnKanakku', desc: 'The page you were looking for could not be found.', url: '/404.html', depth: 0, root: true, cur: '', body: `<main class="container narrow"><h1>Page not found</h1><p>Sorry, we couldn’t find that page. Try the <a href="/calculators/">full list of calculators</a> or go back to the <a href="/">homepage</a>.</p></main>` }));
 
 // ---- guides (long-form articles; /guides/ index + one page per article) ----
 write('guides/index.html', layout({
-  title: 'Guides – Loans, GST, Gold, Construction & Budgeting | SmartTools India', desc: 'Plain-language guides for Indian users: how EMI is calculated, GST slabs, gold loan value, house construction cost, budgeting and more.', url: '/guides/', depth: 1, cur: 'guides',
+  title: 'Guides – Loans, GST, Gold, Construction & Budgeting | EnKanakku', desc: 'Plain-language guides for Indian users: how EMI is calculated, GST slabs, gold loan value, house construction cost, budgeting and more.', url: '/guides/', depth: 1, cur: 'guides',
   ld: { '@context': 'https://schema.org', '@graph': [crumbLd([['Home', '/'], ['Guides']])] },
   body: `<main class="container"><p class="crumbs"><a href="/">Home</a> › Guides</p><h1>Guides</h1>
   <p>Step-by-step explainers that sit alongside our calculators – formulas, worked examples and common mistakes, written for everyday Indian users.</p>
@@ -388,9 +388,9 @@ GUIDES.forEach((g) => {
   const url = `/guides/${g.slug}.html`;
   const rel = g.related.map((r) => CALCS.find((c) => c.slug === r)).filter(Boolean);
   write(`guides/${g.slug}.html`, layout({
-    title: `${g.title} | SmartTools India`, desc: g.desc, url, depth: 1, cur: 'guides',
+    title: `${g.title} | EnKanakku`, desc: g.desc, url, depth: 1, cur: 'guides',
     ld: { '@context': 'https://schema.org', '@graph': [
-      { '@type': 'Article', headline: g.title, description: g.desc, inLanguage: 'en-IN', mainEntityOfPage: DOMAIN + url, dateModified: `${YEAR}-10-10`, author: { '@type': 'Organization', name: 'SmartTools India' }, publisher: { '@type': 'Organization', name: 'SmartTools India' } },
+      { '@type': 'Article', headline: g.title, description: g.desc, inLanguage: 'en-IN', mainEntityOfPage: DOMAIN + url, dateModified: `${YEAR}-10-10`, author: { '@type': 'Organization', name: 'EnKanakku' }, publisher: { '@type': 'Organization', name: 'EnKanakku' } },
       crumbLd([['Home', '/'], ['Guides', '/guides/'], [g.title]])] },
     body: `<main class="container narrow"><p class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › ${esc(g.title)}</p>
   <article class="seo-text guide"><h1>${esc(g.title)}</h1><p class="lead">${esc(g.intro)}</p>

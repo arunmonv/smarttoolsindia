@@ -1,4 +1,4 @@
-/* SmartTools India - shared styles. Colors are tokens so dark mode is a variable swap. */
+/* EnKanakku - shared styles. Colors are tokens so dark mode is a variable swap. */
 :root{--bg:#fff;--bg-soft:#eef5ff;--card:#fff;--text:#0f172a;--muted:#475569;--border:#e2e8f0;--primary:#2563eb;--primary-d:#1d4ed8;--footer:#0f1b33;--radius:14px}
 :root[data-theme="dark"]{--bg:#0b1220;--bg-soft:#101a30;--card:#131d33;--text:#e5ecf8;--muted:#9fb0cc;--border:#223050;--primary:#5b8cff;--primary-d:#3b6df0}
 *{box-sizing:border-box}

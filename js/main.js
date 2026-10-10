@@ -23,6 +23,7 @@
     };
     var filter = function () {
       var words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      grid.classList.toggle('searching', words.length > 0); // lets CSS show only the top featured tools when not searching
       if (!words.length) { grid.innerHTML = featuredHtml; title.textContent = featuredTitle; none.style.display = 'none'; return; } // back to featured
       // A word matches when it starts a word in the tool text ("age" finds Age Calculator, not "percentage")
       var pats = words.map(function (w) { return new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')); });

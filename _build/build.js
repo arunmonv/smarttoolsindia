@@ -3,7 +3,7 @@
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DOMAIN = 'https://smarttoolindia.netlify.app';
-const EMAIL = 'info@smarttoolsindia.com';              // TODO: replace with the real contact email
+const EMAIL = 'konjamtherium@gmail.com';               // contact email
 const YEAR = 2026;
 const ICONS = 'smarttools-icon-pack/smarttools_icon_pack/';   // icon pack location (relative to site root)
 // Tool slug -> icon file when the pack's filename differs from the slug
@@ -124,6 +124,8 @@ function layout(o) {
 <meta property="og:locale" content="en_IN">
 <link rel="icon" href="${prefix}${ICONS}navigation/calculators.png">
 <link rel="stylesheet" href="${prefix}css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DYCSHQRX');</script>
 ${o.ld ? `<script type="application/ld+json">${JSON.stringify(o.ld)}</script>` : ''}
 </head>
 <body>
@@ -333,7 +335,7 @@ simple('privacy-policy', 'Privacy Policy', 'How SmartTools India handles your da
 <p><b>Last updated:</b> ${YEAR}</p>
 <p>Calculations on SmartTools India run entirely in your browser. The values you enter are not sent to or stored on our servers.</p>
 <h2>What is stored on your device</h2><p>We save only your light/dark theme preference in your browser’s local storage.</p>
-<h2>Analytics and advertising</h2><p>If we add analytics or advertising in future, those services may use cookies. We will update this policy and the site to describe them before they go live.</p>
+<h2>Analytics and advertising</h2><p>We use Google Analytics 4 to understand how many people visit the site and which pages they view. Google Analytics may use cookies and collects anonymised usage data such as pages viewed, approximate location and device type. The values you enter into calculators are not shared with it. If we add advertising in future, we will update this policy first.</p>
 <h2>Contact</h2><p>Questions about this policy: <a href="mailto:${EMAIL}">${EMAIL}</a>.</p>`, 'resources');
 simple('disclaimer', 'Disclaimer', 'SmartTools India calculators provide estimates for guidance only and are not financial, tax or legal advice.', 'Disclaimer', `
 <p>The calculators on SmartTools India provide estimates for general guidance only. They are not financial, tax, legal or construction advice.</p>

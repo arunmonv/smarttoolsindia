@@ -190,11 +190,11 @@ function calcPage(c) {
       ${results}
     </div>
   </div>
+  <p class="note">For educational and estimation purposes only – results may contain errors, so please verify before making any decision. <a href="/disclaimer/">Disclaimer</a></p>
   <section class="seo-text">
     <h2>How it works</h2>
     <p>${esc(c.how)}</p>
     ${renderSections(extra.sections || [])}
-    <p class="note"><b>Please note:</b> results are estimates based on the inputs and assumptions shown above. Actual figures depend on your lender, supplier, location and current rules. See our <a href="/disclaimer/">disclaimer</a>.</p>
   </section>
   ${guides.length ? `<section class="block"><h2>Related guides</h2><ul class="plain-list">${guides.map((g) => `<li><a href="/guides/${g.slug}.html">${esc(g.title)}</a></li>`).join('')}</ul></section>` : ''}
   <section class="faq">
@@ -394,7 +394,7 @@ GUIDES.forEach((g) => {
     body: `<main class="container narrow"><p class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › ${esc(g.title)}</p>
   <article class="seo-text guide"><h1>${esc(g.title)}</h1><p class="lead">${esc(g.intro)}</p>
     ${renderSections(g.sections)}
-    <p class="note"><b>Please note:</b> this guide is for general information, not financial, tax or legal advice. Rates and rules change, so confirm current figures with your lender or the official source. See our <a href="/disclaimer/">disclaimer</a>.</p>
+    <p class="note">For educational purposes only – not financial, tax or legal advice. Please verify current rules and figures before deciding. <a href="/disclaimer/">Disclaimer</a></p>
   </article>
   ${rel.length ? `<section class="block"><h2>Try the calculators</h2><div class="tool-grid">${rel.map((r) => card(r, '../')).join('')}</div></section>` : ''}</main>`
   }));

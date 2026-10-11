@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Steel Calculator – Free Online | EnKanakku</title>
+<meta name="description" content="Calculate the weight and cost of TMT steel bars by diameter, length and quantity using the d²/162 formula.">
+<link rel="canonical" href="https://enkanakku.netlify.app/calculators/steel-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnKanakku">
+<meta property="og:title" content="Steel Calculator – Free Online | EnKanakku">
+<meta property="og:description" content="Calculate the weight and cost of TMT steel bars by diameter, length and quantity using the d²/162 formula.">
+<meta property="og:url" content="https://enkanakku.netlify.app/calculators/steel-calculator.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnKanakku – free calculators for India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Steel Calculator – Free Online | EnKanakku">
+<meta name="twitter:description" content="Calculate the weight and cost of TMT steel bars by diameter, length and quantity using the d²/162 formula.">
+<meta name="twitter:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DYCSHQRX');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Steel Calculator","url":"https://enkanakku.netlify.app/calculators/steel-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://enkanakku.netlify.app/"},{"@type":"ListItem","position":2,"name":"Home & Construction","item":"https://enkanakku.netlify.app/home-construction/"},{"@type":"ListItem","position":3,"name":"Steel Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why divide by 162?","acceptedAnswer":{"@type":"Answer","text":"The formula comes from the cross-sectional area of a round bar multiplied by steel density, simplified for diameters in millimetres."}},{"@type":"Question","name":"Which TMT grade is common?","acceptedAnswer":{"@type":"Answer","text":"Fe500 and Fe500D are the most common grades for houses in India."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="EnKanakku home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a><a href="../calculators/land-area-converter.html">Land Area Converter</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../guides/">Guides</a><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../guides/">Guides</a>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../home-construction/">Home &amp; Construction</a> › Steel Calculator</p>
+  <h1>TMT Steel Weight Calculator</h1>
+  <p>Find the weight and cost of reinforcement bars.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="d">Bar diameter</label>
+      <select id="d"><option value="8">8 mm</option><option value="10">10 mm</option><option value="12" selected>12 mm</option><option value="16">16 mm</option><option value="20">20 mm</option><option value="25">25 mm</option></select>
+      <label for="len">Length of each bar (m)</label>
+      <input id="len" type="number" min="0" step="any" value="12" inputmode="decimal">
+      <label for="qty">Number of bars</label>
+      <input id="qty" type="number" min="0" step="1" value="100" inputmode="decimal">
+      <label for="price">Price per kg (₹)</label>
+      <input id="price" type="number" min="0" step="any" value="65" inputmode="decimal">
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Weight per metre</small><b id="perm">–</b></div>
+      <div><small>Weight per bar</small><b id="bar">–</b></div>
+      <div><small>Total weight</small><b id="total">–</b></div>
+      <div><small>Estimated cost</small><b id="cost">–</b></div>
+    </div>
+  </div>
+  <p class="note">For educational and estimation purposes only – results may contain errors, so please verify before making any decision. <a href="../disclaimer/">Disclaimer</a></p>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>Weight per metre = d² ÷ 162 (d in mm), derived from steel’s density of 7850 kg/m³. Standard TMT bars come in 12 m lengths. Rates change daily, so use your supplier’s current price.</p>
+    <h2>What this calculator does</h2><p>Given the bar diameter, length and number of bars, it gives the weight and cost of steel using the d² ÷ 162 formula. It is useful to cross-check a bar bending schedule or a supplier quote.</p>
+    <h2>Worked example</h2><p>A 12 mm bar weighs 144 ÷ 162 = 0.889 kg per metre, so a 12 m bar weighs about 10.67 kg. For 100 such bars the weight is about 1,067 kg, and at ₹65 per kg the steel costs about ₹69,333.</p>
+    <h2>Tips and limits</h2><ul><li>Real bars vary slightly from the formula within the tolerance allowed by the standard. Add wastage from cutting and overlaps.</li><li>Rates change daily, so use your supplier’s current price.</li></ul>
+  </section>
+  
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>Why divide by 162?</summary><p>The formula comes from the cross-sectional area of a round bar multiplied by steel density, simplified for diameters in millimetres.</p></details>
+    <details><summary>Which TMT grade is common?</summary><p>Fe500 and Fe500D are the most common grades for houses in India.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Home &amp; Construction tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/house-construction-cost-calculator.html" data-keywords="building home area rate"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/construction-cost-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>House Construction Cost Calculator</h3><p>Estimate construction cost based on area and rate.</p><span>Use Now →</span></a><a class="tool" href="../calculators/paint-calculator.html" data-keywords="walls litres colour"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/paint-calculator.svg" width="44" height="44" loading="lazy" alt=""><h3>Paint Calculator</h3><p>Find the required paint quantity for your walls.</p><span>Use Now →</span></a><a class="tool" href="../calculators/tile-calculator.html" data-keywords="flooring floor"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/tile-calculator.svg" width="44" height="44" loading="lazy" alt=""><h3>Tile Calculator</h3><p>Calculate number of tiles and estimated cost.</p><span>Use Now →</span></a><a class="tool" href="../calculators/cement-calculator.html" data-keywords="concrete mix m20 slab sand aggregate"><img src="../smarttools-icon-pack/smarttools_icon_pack/home-construction/cement-calculator.svg" width="44" height="44" loading="lazy" alt=""><h3>Cement Calculator</h3><p>Cement bags, sand and aggregate for a concrete slab.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="40" height="40" alt=""><span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"perm":"Weight per metre","bar":"Weight per bar","total":"Total weight","cost":"Estimated cost"},compute:function(v, f) {
+    if (![v.d, v.len, v.qty, v.price].every(N)) return null;
+    const perm = v.d * v.d / 162; // kg per metre
+    return { perm: f.num(perm, 3) + ' kg', bar: f.num(perm * v.len, 2) + ' kg', total: f.num(perm * v.len * v.qty, 1) + ' kg', cost: f.inr(perm * v.len * v.qty * v.price) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

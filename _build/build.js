@@ -14,10 +14,10 @@ const iconOf = (c) => {
   const svg = `${c.cat}/${c.slug}.svg`;
   return fs.existsSync(path.join(ROOT, ICONS, svg)) ? svg : `${c.cat}/${c.slug}.png`;
 };
-const CALCS = [...require('./calcs1.js'), ...require('./calcs2.js')];
+const CALCS = [...require('./calcs1.js'), ...require('./calcs2.js'), ...require('./calcs3.js'), ...require('./calcs4.js')];
 // Long-form calculator write-ups (content-*.js) and guide articles (guides*.js); missing files are skipped
 const tryReq = (f) => { try { return require(f); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; return null; } };
-const CONTENT = Object.assign({}, ...['a', 'b', 'c'].map((k) => tryReq(`./content-${k}.js`) || {}));
+const CONTENT = Object.assign({}, ...['a', 'b', 'c', 'd', 'e'].map((k) => tryReq(`./content-${k}.js`) || {}));
 const GUIDES = [].concat(...['1', '2'].map((k) => tryReq(`./guides${k}.js`) || []));
 const guideCard = (g) => `<a class="tool" href="/guides/${g.slug}.html"><h3>${esc(g.title)}</h3><p>${esc(g.desc)}</p><span>Read guide →</span></a>`;
 // Render {h, p[]} sections to HTML; paragraphs starting with '- ' become bullet lists
@@ -30,9 +30,9 @@ const renderSections = (secs, h = 'h2') => secs.map((sec) => {
 
 // ---- categories (order = homepage order) ----
 const CATS = [
-  { key: 'finance', name: 'Finance', short: 'Loans, EMI, Gold, Savings and more', icon: 'finance/savings-calculator.svg', nav: 'calculators',
-    title: 'Finance Calculators – EMI, Loan, Gold & Savings', desc: 'Free finance calculators for India: EMI, personal loan, home loan, car & bike loan, gold loan, gold jewellery price, savings and loan comparison.',
-    text: 'Plan borrowing and saving with confidence. These calculators cover every common loan in India – home, car, bike and personal – as well as gold loans, jewellery pricing and savings growth. All calculations run in your browser; nothing you enter is sent or stored.' },
+  { key: 'finance', name: 'Finance', short: 'EMI, SIP, FD, Tax, Gold and more', icon: 'finance/savings-calculator.svg', nav: 'calculators',
+    title: 'Finance Calculators – EMI, SIP, FD, Income Tax, Gold & Loans', desc: 'Free finance calculators for India: EMI, SIP, step-up SIP, FD, RD, PPF, income tax (old vs new regime), HRA, gratuity, loan prepayment, gold loan and more.',
+    text: 'Plan borrowing and saving with confidence. These calculators cover every common loan in India – home, car, bike and personal – as well as gold loans, jewellery pricing, savings growth, SIP, FD, RD and PPF returns, income tax under both regimes, HRA exemption, gratuity and loan prepayment savings. All calculations run in your browser; nothing you enter is sent or stored.' },
   { key: 'home-construction', name: 'Home & Construction', short: 'Construction, Paint, Tiles, Cement and more', icon: 'home-construction/construction-cost-calculator.png', nav: 'calculators',
     title: 'Home & Construction Calculators – Cost, Paint, Tile, Cement', desc: 'Free construction calculators for India: house construction cost, paint, tiles, cement, bricks, TMT steel and flooring estimates.',
     text: 'Budget and order materials for your home. Estimate overall construction cost, then work out paint, tiles, cement, bricks, steel and flooring quantities so you buy the right amount and avoid wastage.' },
@@ -73,6 +73,25 @@ const META = {
   'invoice-generator': ['Subtotal, discount, GST and total for an invoice.', 'bill gst invoice total'],
   'break-even-calculator': ['Units and revenue needed to cover your costs.', 'fixed cost variable cost'],
   'roi-calculator': ['Return on investment and annualised CAGR.', 'return profit cagr investment'],
+  'sip-calculator': ['Monthly SIP maturity value, invested amount and returns.', 'mutual fund monthly investment systematic investment plan'],
+  'step-up-sip-calculator': ['Grow your SIP by a fixed percentage every year.', 'top up sip annual increase mutual fund'],
+  'lumpsum-calculator': ['Future value of a one-time mutual fund investment.', 'mutual fund one time investment returns'],
+  'fd-calculator': ['FD maturity amount with quarterly compounding and senior rates.', 'fixed deposit bank interest senior citizen'],
+  'rd-calculator': ['Recurring deposit maturity value and interest.', 'recurring deposit monthly bank post office'],
+  'ppf-calculator': ['PPF maturity value for 15 years or more.', 'public provident fund tax free 80c'],
+  'income-tax-calculator': ['Compare old vs new tax regime and find which saves more.', 'tax slab regime 87a rebate itr salary'],
+  'cagr-calculator': ['Compound annual growth rate of an investment.', 'growth rate return annualised'],
+  'simple-compound-interest-calculator': ['Simple and compound interest side by side.', 'si ci interest principal'],
+  'loan-prepayment-calculator': ['Interest and tenure saved by part-paying a loan.', 'part payment foreclosure home loan save interest'],
+  'hra-exemption-calculator': ['Tax-exempt HRA from rent, salary and city.', 'house rent allowance 10(13a) rent tax'],
+  'gratuity-calculator': ['Gratuity from last basic salary and years of service.', 'retirement resignation 15 days 26'],
+  'stamp-duty-calculator': ['Stamp duty, registration fee and total property cost.', 'property registration guideline value sale deed tamil nadu'],
+  'land-area-converter': ['Convert sq ft, cent, ground, guntha, acre and hectare.', 'land cent ground acre guntha sq ft plot'],
+  'brick-calculator': ['Bricks and cost needed for a wall.', 'wall masonry quantity wastage'],
+  'steel-calculator': ['TMT bar weight and cost by diameter and length.', 'tmt rebar reinforcement kg d2/162'],
+  'eb-bill-calculator': ['Estimate your Tamil Nadu electricity bill from units.', 'tneb tnpdcl eb electricity units current bill'],
+  'gst-reverse-calculator': ['Remove GST from a GST-inclusive price.', 'inclusive exclusive base price cgst sgst'],
+  'gold-savings-scheme-calculator': ['Bonus and returns of a jeweller’s 11+1 monthly scheme.', 'chit jewellery monthly scheme 11+1 gold'],
   'marriage-budget-calculator': ['Plan wedding costs with a contingency buffer.', 'wedding catering venue decoration'],
   'budget-planner': ['Split income into needs, wants and savings.', '50/30/20 expenses monthly'],
   'education-cost-calculator': ['Future education cost and monthly savings needed.', 'college school fees child inflation'],

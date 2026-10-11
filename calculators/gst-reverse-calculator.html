@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GST Reverse Calculator – Free Online | EnKanakku</title>
+<meta name="description" content="Free GST reverse calculator for India. Enter a GST-inclusive price to find the original price, GST amount, CGST and SGST.">
+<link rel="canonical" href="https://enkanakku.netlify.app/calculators/gst-reverse-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnKanakku">
+<meta property="og:title" content="GST Reverse Calculator – Free Online | EnKanakku">
+<meta property="og:description" content="Free GST reverse calculator for India. Enter a GST-inclusive price to find the original price, GST amount, CGST and SGST.">
+<meta property="og:url" content="https://enkanakku.netlify.app/calculators/gst-reverse-calculator.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnKanakku – free calculators for India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GST Reverse Calculator – Free Online | EnKanakku">
+<meta name="twitter:description" content="Free GST reverse calculator for India. Enter a GST-inclusive price to find the original price, GST amount, CGST and SGST.">
+<meta name="twitter:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DYCSHQRX');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"GST Reverse Calculator","url":"https://enkanakku.netlify.app/calculators/gst-reverse-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://enkanakku.netlify.app/"},{"@type":"ListItem","position":2,"name":"Business","item":"https://enkanakku.netlify.app/business/"},{"@type":"ListItem","position":3,"name":"GST Reverse Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why not just subtract 18%?","acceptedAnswer":{"@type":"Answer","text":"GST is added on the base price, so it is 18% of the base price, not of the final price. Subtracting 18% of the final price removes too much."}},{"@type":"Question","name":"What are the current GST rates?","acceptedAnswer":{"@type":"Answer","text":"Common slabs are 0%, 5% and 18%, with 40% on a few items; 3% applies to gold and silver. Confirm the rate for your item with the GST rate schedule."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="EnKanakku home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a><a href="../calculators/land-area-converter.html">Land Area Converter</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../guides/">Guides</a><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../guides/">Guides</a>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../business/">Business</a> › GST Reverse Calculator</p>
+  <h1>GST Reverse Calculator (Remove GST from Price)</h1>
+  <p>Found a GST-inclusive price? Work backwards to the base price and the tax amount.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="amt">GST-inclusive price (₹)</label>
+      <input id="amt" type="number" min="0" step="any" value="11800" inputmode="decimal">
+      <label for="rate">GST rate (%)</label>
+      <input id="rate" type="number" min="" step="any" value="18" inputmode="decimal" list="rate-list"><datalist id="rate-list"><option value="0"><option value="3"><option value="5"><option value="12"><option value="18"><option value="28"><option value="40"></datalist>
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Price before GST</small><b id="base">–</b></div>
+      <div><small>Total GST</small><b id="gst">–</b></div>
+      <div><small>CGST (half)</small><b id="cgst">–</b></div>
+      <div><small>SGST (half)</small><b id="sgst">–</b></div>
+    </div>
+  </div>
+  <p class="note">For educational and estimation purposes only – results may contain errors, so please verify before making any decision. <a href="../disclaimer/">Disclaimer</a></p>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>Price before GST = inclusive price ÷ (1 + GST rate ÷ 100). GST = inclusive price − price before GST. For sales within a state the tax splits equally into CGST and SGST; for inter-state sales the whole amount is IGST. Check the GST rate that applies to your product or service.</p>
+    <h2>What this calculator does</h2><p>If a price already includes GST, this calculator removes it and shows the original price, the GST amount, and the CGST and SGST halves.</p>
+    <h2>Worked example</h2><p>A GST-inclusive price of ₹11,800 at 18%: price before GST = 11,800 ÷ 1.18 = ₹10,000. GST is ₹1,800, split into ₹900 CGST and ₹900 SGST.</p>
+    <h2>Common mistakes</h2><ul><li>Taking 18% off the final price gives ₹9,676 instead of the correct ₹10,000, because GST is a percentage of the base, not of the total.</li><li>For inter-state supplies the full amount is IGST, not CGST plus SGST.</li></ul>
+  </section>
+  
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>Why not just subtract 18%?</summary><p>GST is added on the base price, so it is 18% of the base price, not of the final price. Subtracting 18% of the final price removes too much.</p></details>
+    <details><summary>What are the current GST rates?</summary><p>Common slabs are 0%, 5% and 18%, with 40% on a few items; 3% applies to gold and silver. Confirm the rate for your item with the GST rate schedule.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Business tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/gst-calculator.html" data-keywords="tax invoice inclusive exclusive cgst sgst"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/gst-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>GST Calculator</h3><p>Calculate GST amount and final price easily.</p><span>Use Now →</span></a><a class="tool" href="../calculators/profit-margin-calculator.html" data-keywords="markup business profit"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/margin-calculator.svg" width="44" height="44" loading="lazy" alt=""><h3>Profit Margin Calculator</h3><p>Find your profit margin and markup percentage.</p><span>Use Now →</span></a><a class="tool" href="../calculators/markup-calculator.html" data-keywords="price profit"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/selling-price-calculator.svg" width="44" height="44" loading="lazy" alt=""><h3>Markup Calculator</h3><p>Set your selling price from cost and markup %.</p><span>Use Now →</span></a><a class="tool" href="../calculators/discount-calculator.html" data-keywords="sale offer off"><img src="../smarttools-icon-pack/smarttools_icon_pack/business/discount-calculator.svg" width="44" height="44" loading="lazy" alt=""><h3>Discount Calculator</h3><p>Final price and savings after one or two discounts.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="40" height="40" alt=""><span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"base":"Price before GST","gst":"Total GST","cgst":"CGST (half)","sgst":"SGST (half)"},compute:function(v, f) {
+    if (!(v.amt > 0) || !N(v.rate)) return null;
+    const base = v.amt / (1 + v.rate / 100), gst = v.amt - base;
+    return { base: f.inr(base), gst: f.inr(gst), cgst: f.inr(gst / 2), sgst: f.inr(gst / 2) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

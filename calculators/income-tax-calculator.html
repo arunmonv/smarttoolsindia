@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Income Tax Calculator – Free Online | EnKanakku</title>
+<meta name="description" content="Free income tax calculator for India, FY 2026-27 (AY 2027-28). Compare old and new tax regimes with deductions, rebate and cess.">
+<link rel="canonical" href="https://enkanakku.netlify.app/calculators/income-tax-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnKanakku">
+<meta property="og:title" content="Income Tax Calculator – Free Online | EnKanakku">
+<meta property="og:description" content="Free income tax calculator for India, FY 2026-27 (AY 2027-28). Compare old and new tax regimes with deductions, rebate and cess.">
+<meta property="og:url" content="https://enkanakku.netlify.app/calculators/income-tax-calculator.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnKanakku – free calculators for India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Income Tax Calculator – Free Online | EnKanakku">
+<meta name="twitter:description" content="Free income tax calculator for India, FY 2026-27 (AY 2027-28). Compare old and new tax regimes with deductions, rebate and cess.">
+<meta name="twitter:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DYCSHQRX');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Income Tax Calculator","url":"https://enkanakku.netlify.app/calculators/income-tax-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://enkanakku.netlify.app/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://enkanakku.netlify.app/finance/"},{"@type":"ListItem","position":3,"name":"Income Tax Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which regime is better for me?","acceptedAnswer":{"@type":"Answer","text":"The new regime usually wins unless your old-regime deductions (80C, 80D, HRA, home loan interest) are large. Enter your own figures above to compare."}},{"@type":"Question","name":"Are these the latest slabs?","acceptedAnswer":{"@type":"Answer","text":"They match the slabs announced for FY 2026-27, which left the earlier slabs unchanged. Tax laws can change, so check the Income Tax Department website before filing."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="EnKanakku home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a><a href="../calculators/land-area-converter.html">Land Area Converter</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../guides/">Guides</a><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../guides/">Guides</a>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../finance/">Finance</a> › Income Tax Calculator</p>
+  <h1>Income Tax Calculator (Old vs New Regime)</h1>
+  <p>Compare your tax under the old and new regimes and see which one saves more.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="inc">Gross annual income (₹)</label>
+      <input id="inc" type="number" min="0" step="any" value="1500000" inputmode="decimal">
+      <label for="sal">Income type</label>
+      <select id="sal"><option value="1" selected>Salaried / pensioner (standard deduction)</option><option value="0">Business / other</option></select>
+      <label for="age">Age</label>
+      <select id="age"><option value="0" selected>Below 60</option><option value="60">60 to 79 (senior)</option><option value="80">80 and above (super senior)</option></select>
+      <label for="d80c">Old regime: 80C investments (₹, max 1,50,000)</label>
+      <input id="d80c" type="number" min="0" step="any" value="150000" inputmode="decimal">
+      <label for="d80d">Old regime: 80D health insurance (₹)</label>
+      <input id="d80d" type="number" min="0" step="any" value="25000" inputmode="decimal">
+      <label for="dother">Old regime: other deductions – HRA, home loan interest, NPS (₹)</label>
+      <input id="dother" type="number" min="0" step="any" value="0" inputmode="decimal">
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Taxable income (old regime)</small><b id="oldTaxable">–</b></div>
+      <div><small>Tax (old regime, with cess)</small><b id="oldTax">–</b></div>
+      <div><small>Taxable income (new regime)</small><b id="newTaxable">–</b></div>
+      <div><small>Tax (new regime, with cess)</small><b id="newTax">–</b></div>
+      <div><small>Better option</small><b id="better">–</b></div>
+    </div>
+  </div>
+  <p class="note">For educational and estimation purposes only – results may contain errors, so please verify before making any decision. <a href="../disclaimer/">Disclaimer</a></p>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>New regime slabs: nil up to ₹4 lakh, then 5%, 10%, 15%, 20%, 25% and 30% in ₹4 lakh steps above it, with a ₹75,000 standard deduction and a rebate that makes income up to ₹12 lakh tax-free. Old regime: 5% from ₹2.5 lakh, 20% from ₹5 lakh, 30% above ₹10 lakh (higher exemption for seniors), with a ₹50,000 standard deduction, deductions such as 80C and 80D, and a rebate up to ₹5 lakh. A 4% cess is added. Surcharge for income above ₹50 lakh is not included.</p>
+    <h2>What this calculator does</h2><p>It calculates your income tax under both the old and the new regime for FY 2026-27 and tells you which one costs less. You enter your gross income, whether you are salaried, your age group, and the deductions you would claim in the old regime. The new regime allows only the standard deduction.</p>
+    <h2>Worked example</h2><p>Take a salaried person under 60 with ₹15,00,000 of income, ₹1,50,000 under 80C and ₹25,000 under 80D. Old regime: taxable income ₹12,75,000, tax with cess about ₹2,02,800. New regime: taxable income ₹14,25,000, tax with cess about ₹97,500. The new regime saves about ₹1,05,300 here.</p><p>At ₹12,75,000 of salary the new regime tax is zero, because the standard deduction brings taxable income to ₹12,00,000 and the rebate wipes out the tax.</p>
+    <h2>Assumptions and limits</h2><ul><li>Resident individuals only. Surcharge on income above ₹50 lakh is not included.</li><li>Capital gains, special-rate income and the marginal relief at the old-regime rebate limit are not modelled.</li><li>Salaried standard deduction: ₹75,000 (new) and ₹50,000 (old).</li><li>Slabs can change in future budgets. Check the Income Tax Department website before filing your return.</li></ul>
+  </section>
+  
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>Which regime is better for me?</summary><p>The new regime usually wins unless your old-regime deductions (80C, 80D, HRA, home loan interest) are large. Enter your own figures above to compare.</p></details>
+    <details><summary>Are these the latest slabs?</summary><p>They match the slabs announced for FY 2026-27, which left the earlier slabs unchanged. Tax laws can change, so check the Income Tax Department website before filing.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Finance tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/gold-jewellery-calculator.html" data-keywords="making charges wastage gold price"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/gold-jewellery-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Gold Jewellery Calculator</h3><p>Find the final price including making charges, wastage &amp; GST.</p><span>Use Now →</span></a><a class="tool" href="../calculators/gold-loan-calculator.html" data-keywords="loan against gold purity"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/gold-loan-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Gold Loan Calculator</h3><p>Know your loan value based on gold weight and purity.</p><span>Use Now →</span></a><a class="tool" href="../calculators/emi-calculator.html" data-keywords="loan interest repayment"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/emi-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>EMI Calculator</h3><p>Calculate your monthly EMI, total interest and repayment.</p><span>Use Now →</span></a><a class="tool" href="../calculators/personal-loan-calculator.html" data-keywords="unsecured loan emi interest"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/personal-loan-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Personal Loan Calculator</h3><p>Get your personal loan EMI and total cost with fees.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="40" height="40" alt=""><span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"oldTaxable":"Taxable income (old regime)","oldTax":"Tax (old regime, with cess)","newTaxable":"Taxable income (new regime)","newTax":"Tax (new regime, with cess)","better":"Better option"},compute:function(v, f) {
+    if (!N(v.inc) || !N(v.d80c) || !N(v.d80d) || !N(v.dother)) return null;
+    const L = 100000;
+    // old regime: basic exemption depends on age; 80C capped at ₹1.5 lakh; standard deduction ₹50,000
+    const oldTi = Math.max(0, v.inc - (v.sal ? 50000 : 0) - Math.min(v.d80c, 150000) - v.d80d - v.dother);
+    const ex = v.age >= 80 ? 5 * L : v.age >= 60 ? 3 * L : 2.5 * L;
+    let ot = 0;
+    if (oldTi > ex) ot += (Math.min(oldTi, 5 * L) - ex) * 0.05;
+    if (oldTi > 5 * L) ot += (Math.min(oldTi, 10 * L) - 5 * L) * 0.2;
+    if (oldTi > 10 * L) ot += (oldTi - 10 * L) * 0.3;
+    if (oldTi <= 5 * L) ot = 0; // section 87A rebate
+    // new regime: standard deduction ₹75,000, no other deductions
+    const newTi = Math.max(0, v.inc - (v.sal ? 75000 : 0));
+    const sl = [[4 * L, 8 * L, 0.05], [8 * L, 12 * L, 0.1], [12 * L, 16 * L, 0.15], [16 * L, 20 * L, 0.2], [20 * L, 24 * L, 0.25], [24 * L, Infinity, 0.3]];
+    let nt = 0;
+    sl.forEach((s) => { if (newTi > s[0]) nt += (Math.min(newTi, s[1]) - s[0]) * s[2]; });
+    if (newTi <= 12 * L) nt = 0; else nt = Math.min(nt, newTi - 12 * L); // 87A rebate with marginal relief
+    const oldTax = ot * 1.04, newTax = nt * 1.04; // 4% health & education cess
+    const diff = Math.abs(oldTax - newTax);
+    const better = diff < 1 ? 'Both are equal' : oldTax < newTax ? 'Old regime saves ' + f.inr(diff) : 'New regime saves ' + f.inr(diff);
+    return { oldTaxable: f.inr(oldTi), oldTax: f.inr(oldTax), newTaxable: f.inr(newTi), newTax: f.inr(newTax), better };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

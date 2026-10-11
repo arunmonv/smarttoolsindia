@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CAGR Calculator – Free Online | EnKanakku</title>
+<meta name="description" content="Free CAGR calculator. Find the compound annual growth rate and absolute return of an investment from its start value, end value and years.">
+<link rel="canonical" href="https://enkanakku.netlify.app/calculators/cagr-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnKanakku">
+<meta property="og:title" content="CAGR Calculator – Free Online | EnKanakku">
+<meta property="og:description" content="Free CAGR calculator. Find the compound annual growth rate and absolute return of an investment from its start value, end value and years.">
+<meta property="og:url" content="https://enkanakku.netlify.app/calculators/cagr-calculator.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnKanakku – free calculators for India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAGR Calculator – Free Online | EnKanakku">
+<meta name="twitter:description" content="Free CAGR calculator. Find the compound annual growth rate and absolute return of an investment from its start value, end value and years.">
+<meta name="twitter:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DYCSHQRX');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"CAGR Calculator","url":"https://enkanakku.netlify.app/calculators/cagr-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://enkanakku.netlify.app/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://enkanakku.netlify.app/finance/"},{"@type":"ListItem","position":3,"name":"CAGR Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a good CAGR?","acceptedAnswer":{"@type":"Answer","text":"Compare it with the alternatives: FDs near 7%, inflation near 5–6%, and long-term equity funds in the low teens in good periods. Past returns do not guarantee future ones."}},{"@type":"Question","name":"Can CAGR be negative?","acceptedAnswer":{"@type":"Answer","text":"Yes, when the ending value is lower than the beginning value, the CAGR is negative. This calculator needs a positive ending value."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="EnKanakku home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a><a href="../calculators/land-area-converter.html">Land Area Converter</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../guides/">Guides</a><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../guides/">Guides</a>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../finance/">Finance</a> › CAGR Calculator</p>
+  <h1>CAGR Calculator (Compound Annual Growth Rate)</h1>
+  <p>Find the yearly growth rate that turned your starting value into the ending value.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="start">Beginning value (₹)</label>
+      <input id="start" type="number" min="0" step="any" value="100000" inputmode="decimal">
+      <label for="end">Ending value (₹)</label>
+      <input id="end" type="number" min="0" step="any" value="250000" inputmode="decimal">
+      <label for="years">Period (years)</label>
+      <input id="years" type="number" min="0" step="0.25" value="5" inputmode="decimal">
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>CAGR</small><b id="cagr">–</b></div>
+      <div><small>Absolute return</small><b id="abs">–</b></div>
+      <div><small>Total gain / loss</small><b id="gain">–</b></div>
+    </div>
+  </div>
+  <p class="note">For educational and estimation purposes only – results may contain errors, so please verify before making any decision. <a href="../disclaimer/">Disclaimer</a></p>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>CAGR = (ending value ÷ beginning value)^(1 ÷ years) − 1. It smooths uneven yearly returns into one steady annual rate. It suits a single investment with no extra deposits or withdrawals; for SIPs, use XIRR instead.</p>
+    <h2>What this calculator does</h2><p>CAGR turns the growth from a starting value to an ending value into one smooth yearly rate. It lets you compare investments held for different periods on equal terms.</p>
+    <h2>Worked example</h2><p>₹1,00,000 that becomes ₹2,50,000 over 5 years has an absolute return of 150% and a CAGR of about 20.11% a year.</p>
+    <h2>Tips and limits</h2><ul><li>CAGR ignores the ups and downs along the way; two investments with the same CAGR can have very different risk.</li><li>It assumes no money was added or withdrawn. For SIPs or irregular cash flows use XIRR.</li></ul>
+  </section>
+  
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>What is a good CAGR?</summary><p>Compare it with the alternatives: FDs near 7%, inflation near 5–6%, and long-term equity funds in the low teens in good periods. Past returns do not guarantee future ones.</p></details>
+    <details><summary>Can CAGR be negative?</summary><p>Yes, when the ending value is lower than the beginning value, the CAGR is negative. This calculator needs a positive ending value.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Finance tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/gold-jewellery-calculator.html" data-keywords="making charges wastage gold price"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/gold-jewellery-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Gold Jewellery Calculator</h3><p>Find the final price including making charges, wastage &amp; GST.</p><span>Use Now →</span></a><a class="tool" href="../calculators/gold-loan-calculator.html" data-keywords="loan against gold purity"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/gold-loan-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Gold Loan Calculator</h3><p>Know your loan value based on gold weight and purity.</p><span>Use Now →</span></a><a class="tool" href="../calculators/emi-calculator.html" data-keywords="loan interest repayment"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/emi-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>EMI Calculator</h3><p>Calculate your monthly EMI, total interest and repayment.</p><span>Use Now →</span></a><a class="tool" href="../calculators/personal-loan-calculator.html" data-keywords="unsecured loan emi interest"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/personal-loan-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Personal Loan Calculator</h3><p>Get your personal loan EMI and total cost with fees.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="40" height="40" alt=""><span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"cagr":"CAGR","abs":"Absolute return","gain":"Total gain / loss"},compute:function(v, f) {
+    if (!(v.start > 0) || !(v.end > 0) || !(v.years > 0)) return null;
+    return { cagr: f.num((Math.pow(v.end / v.start, 1 / v.years) - 1) * 100, 2) + '%', abs: f.num((v.end / v.start - 1) * 100, 2) + '%', gain: f.inr(v.end - v.start) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>

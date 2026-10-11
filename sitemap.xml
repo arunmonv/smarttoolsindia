@@ -60,4 +60,23 @@
   <url><loc>https://enkanakku.netlify.app/calculators/unit-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://enkanakku.netlify.app/calculators/date-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://enkanakku.netlify.app/calculators/age-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/sip-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/step-up-sip-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/lumpsum-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/fd-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/rd-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/ppf-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/income-tax-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/cagr-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/simple-compound-interest-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/loan-prepayment-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/hra-exemption-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/gratuity-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/stamp-duty-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/land-area-converter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/brick-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/steel-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/eb-bill-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/gst-reverse-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://enkanakku.netlify.app/calculators/gold-savings-scheme-calculator.html</loc><priority>0.8</priority></url>
 </urlset>

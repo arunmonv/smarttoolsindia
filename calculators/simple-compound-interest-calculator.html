@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simple &amp; Compound Interest Calculator – Free Online | EnKanakku</title>
+<meta name="description" content="Free simple interest and compound interest calculator. Compare interest and maturity amount side by side for any principal, rate and time.">
+<link rel="canonical" href="https://enkanakku.netlify.app/calculators/simple-compound-interest-calculator.html">
+<meta name="theme-color" content="#2563eb">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnKanakku">
+<meta property="og:title" content="Simple &amp; Compound Interest Calculator – Free Online | EnKanakku">
+<meta property="og:description" content="Free simple interest and compound interest calculator. Compare interest and maturity amount side by side for any principal, rate and time.">
+<meta property="og:url" content="https://enkanakku.netlify.app/calculators/simple-compound-interest-calculator.html">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EnKanakku – free calculators for India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simple &amp; Compound Interest Calculator – Free Online | EnKanakku">
+<meta name="twitter:description" content="Free simple interest and compound interest calculator. Compare interest and maturity amount side by side for any principal, rate and time.">
+<meta name="twitter:image" content="https://enkanakku.netlify.app/img/og-image.png">
+<link rel="icon" href="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DYCSHQRX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DYCSHQRX');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Simple & Compound Interest Calculator","url":"https://enkanakku.netlify.app/calculators/simple-compound-interest-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://enkanakku.netlify.app/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://enkanakku.netlify.app/finance/"},{"@type":"ListItem","position":3,"name":"Simple & Compound Interest Calculator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between simple and compound interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest stays fixed on the principal. Compound interest grows each period because it is earned on earlier interest too."}},{"@type":"Question","name":"Which do loans and FDs use?","acceptedAnswer":{"@type":"Answer","text":"Most bank FDs and loans use compounding or reducing balances. Some informal loans and a few schemes use simple interest."}}]}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../" aria-label="EnKanakku home">
+      <img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="44" height="44" alt="">
+      <span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <div class="dd"><a class="dd-parent" href="../calculators/" aria-current="page">Calculators</a><div class="dd-menu"><a href="../finance/">Finance</a><a href="../home-construction/">Home &amp; Construction</a><a href="../business/">Business</a><a href="../personal-lifestyle/">Personal &amp; Lifestyle</a><a href="../calculators/">All calculators</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../#featured">Tools</a><div class="dd-menu"><a href="../ai-assistant/">AI Assistant</a><a href="../calculators/emi-calculator.html">EMI Calculator</a><a href="../calculators/gst-calculator.html">GST Calculator</a><a href="../calculators/gold-jewellery-calculator.html">Gold Jewellery Calculator</a><a href="../calculators/salary-take-home-calculator.html">Salary / Take-home Calculator</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../converters-utilities/">Converters</a><div class="dd-menu"><a href="../calculators/percentage-calculator.html">Percentage Calculator</a><a href="../calculators/unit-converter.html">Unit Converter</a><a href="../calculators/date-calculator.html">Date Calculator</a><a href="../calculators/age-calculator.html">Age Calculator</a><a href="../calculators/land-area-converter.html">Land Area Converter</a></div></div>
+      <div class="dd"><a class="dd-parent" href="../resources/">Resources</a><div class="dd-menu"><a href="../guides/">Guides</a><a href="../about/">About Us</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy Policy</a><a href="../disclaimer/">Disclaimer</a></div></div>
+      <a href="../guides/">Guides</a>
+      <a href="../about/">About</a>
+    </nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/dark-mode.png" width="22" height="22" alt=""></button>
+    <a class="icon-btn" href="../#q" aria-label="Search tools"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/search.png" width="22" height="22" alt=""></a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container">
+  <p class="crumbs"><a href="../">Home</a> › <a href="../finance/">Finance</a> › Simple &amp; Compound Interest Calculator</p>
+  <h1>Simple &amp; Compound Interest Calculator</h1>
+  <p>See how simple and compound interest differ on the same principal.</p>
+  <div class="calc-wrap">
+    <form class="panel" id="calc-form">
+      <label for="p">Principal (₹)</label>
+      <input id="p" type="number" min="0" step="any" value="100000" inputmode="decimal">
+      <label for="rate">Interest rate (% per year)</label>
+      <input id="rate" type="number" min="0" step="0.05" value="8" inputmode="decimal">
+      <label for="years">Time (years)</label>
+      <input id="years" type="number" min="0" step="0.25" value="5" inputmode="decimal">
+      <label for="m">Compounding</label>
+      <select id="m"><option value="1" selected>Yearly</option><option value="2">Half-yearly</option><option value="4">Quarterly</option><option value="12">Monthly</option></select>
+      <button class="btn" type="submit">Calculate</button> <button class="btn btn-ghost" type="reset">Reset</button>
+    </form>
+    <div class="panel result" aria-live="polite">
+      <div><small>Simple interest</small><b id="si">–</b></div>
+      <div><small>Total with simple interest</small><b id="siTotal">–</b></div>
+      <div><small>Compound interest</small><b id="ci">–</b></div>
+      <div><small>Total with compound interest</small><b id="ciTotal">–</b></div>
+    </div>
+  </div>
+  <p class="note">For educational and estimation purposes only – results may contain errors, so please verify before making any decision. <a href="../disclaimer/">Disclaimer</a></p>
+  <section class="seo-text">
+    <h2>How it works</h2>
+    <p>Simple interest = P × r × t. Compound interest: A = P × (1 + r ÷ m)^(m × t), and the interest is A − P, where m is the compounding frequency per year. Simple interest is charged only on the original principal; compound interest is charged on principal plus interest already earned.</p>
+    <h2>What this calculator does</h2><p>It computes simple interest and compound interest on the same principal, rate and time, so the difference is visible straight away. Pick a compounding frequency for the compound result.</p>
+    <h2>Worked example</h2><p>₹1,00,000 at 8% for 5 years earns simple interest of ₹40,000 (total ₹1,40,000). With yearly compounding it earns about ₹46,933 (total ₹1,46,933). The extra ₹6,933 is interest earned on interest, and the gap widens as the years increase.</p>
+    <h2>Tips</h2><ul><li>Check whether a loan or deposit quotes a simple or compounded rate before comparing offers.</li><li>For monthly loan repayments, use the EMI calculator instead, since EMIs reduce the balance every month.</li></ul>
+  </section>
+  
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details><summary>What is the difference between simple and compound interest?</summary><p>Simple interest stays fixed on the principal. Compound interest grows each period because it is earned on earlier interest too.</p></details>
+    <details><summary>Which do loans and FDs use?</summary><p>Most bank FDs and loans use compounding or reducing balances. Some informal loans and a few schemes use simple interest.</p></details>
+  </section>
+  <section class="block">
+    <h2>More Finance tools</h2>
+    <div class="tool-grid"><a class="tool" href="../calculators/gold-jewellery-calculator.html" data-keywords="making charges wastage gold price"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/gold-jewellery-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Gold Jewellery Calculator</h3><p>Find the final price including making charges, wastage &amp; GST.</p><span>Use Now →</span></a><a class="tool" href="../calculators/gold-loan-calculator.html" data-keywords="loan against gold purity"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/gold-loan-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Gold Loan Calculator</h3><p>Know your loan value based on gold weight and purity.</p><span>Use Now →</span></a><a class="tool" href="../calculators/emi-calculator.html" data-keywords="loan interest repayment"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/emi-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>EMI Calculator</h3><p>Calculate your monthly EMI, total interest and repayment.</p><span>Use Now →</span></a><a class="tool" href="../calculators/personal-loan-calculator.html" data-keywords="unsecured loan emi interest"><img src="../smarttools-icon-pack/smarttools_icon_pack/finance/personal-loan-calculator.png" width="44" height="44" loading="lazy" alt=""><h3>Personal Loan Calculator</h3><p>Get your personal loan EMI and total cost with fees.</p><span>Use Now →</span></a></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../"><img src="../smarttools-icon-pack/smarttools_icon_pack/navigation/calculators.png" width="40" height="40" alt=""><span><strong>En<span>Kanakku</span></strong><small>Calculate • Plan • Build a Better Tomorrow</small></span></a>
+    <nav aria-label="Footer"><a href="../">Home</a><a href="../calculators/">Calculators</a><a href="../#featured">Tools</a><a href="../converters-utilities/">Converters</a><a href="../resources/">Resources</a><a href="../guides/">Guides</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a></nav>
+    <span>© 2026 EnKanakku. All rights reserved. Results are estimates for guidance only.</span>
+  </div>
+</footer>
+<script>var N=function(v){return Number.isFinite(v)&&v>=0};window.CALC={results:{"si":"Simple interest","siTotal":"Total with simple interest","ci":"Compound interest","ciTotal":"Total with compound interest"},compute:function(v, f) {
+    if (!(v.p > 0) || !(v.years > 0) || !N(v.rate)) return null;
+    const si = v.p * v.rate * v.years / 100, tot = v.p * Math.pow(1 + v.rate / 100 / v.m, v.m * v.years);
+    return { si: f.inr(si), siTotal: f.inr(v.p + si), ci: f.inr(tot - v.p), ciTotal: f.inr(tot) };
+  }};</script>
+<script src="../js/main.js" defer></script>
+<script src="../js/calc.js" defer></script>
+</body>
+</html>
